@@ -7,7 +7,7 @@ function HomeScreen() {
     return(
         <View style={styles.header}>
             <Text style={styles.title}>
-                Working!
+                Find 'n Dine
             </Text>
         </View>
     )
