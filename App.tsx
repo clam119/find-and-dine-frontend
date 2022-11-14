@@ -4,7 +4,9 @@ import HomeScreen from './components/HomePage';
 
 export default function App() {
   return (
-    <HomeScreen/>
+    <View style={styles.container}>
+      <HomeScreen/>
+    </View>
   );
 }
 
