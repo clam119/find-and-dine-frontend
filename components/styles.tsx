@@ -1,6 +1,15 @@
 import { StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
+    card: {
+        width: '75%',
+        height: '75%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        borderRadius: 10,
+        backgroundColor: 'gray'
+    },
     container: {
         width: '100%',
         height: '100%',
