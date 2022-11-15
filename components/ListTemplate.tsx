@@ -41,7 +41,7 @@ const Item = (props: ObjectInterface) => {
   );
 };
 
-const ListTemplate = () => {
+export default function ListTemplate (){
   const renderItem = ({ item }) => <Item item={item} />;
 
   return (
@@ -55,4 +55,3 @@ const ListTemplate = () => {
   );
 };
 
-export default ListTemplate;

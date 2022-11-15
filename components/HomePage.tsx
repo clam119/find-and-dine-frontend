@@ -4,16 +4,14 @@ import RestaurantCard from "./RestaurantCard";
 import ListTemplate from "./ListTemplate";
 
 import styles from "./styles";
+import BottomNavBar from "./BottomNavBar";
 
-function HomeScreen() {
+export default function HomePage() {
   return (
     <>
       <View style={styles.header}>
         <Text style={styles.title}>Find 'n Dine</Text>
       </View>
-      <ListTemplate />
     </>
   );
 }
-
-export default HomeScreen;
