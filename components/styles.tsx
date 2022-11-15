@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   },
   containerList: {
     marginTop: StatusBar.currentHeight || 0,
+    width: "100%",
     top: "10%",
     flexDirection: "row",
     alignItems: "center",
