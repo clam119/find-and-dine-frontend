@@ -49,6 +49,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     margin: "2%",
   },
+  bottomNavBar: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   title: {
     top: 20,
     justifyContent: "center",
