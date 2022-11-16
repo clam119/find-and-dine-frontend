@@ -52,12 +52,12 @@ function RestaurantCard({
 				Animated.parallel([
 					Animated.timing(x, {
 						toValue: SCREEN_WIDTH,
-						duration: 200,
+						duration: 500,
 						useNativeDriver: false,
 					}),
 					Animated.timing(cardOpacity, {
 						toValue: 0,
-						duration: 200,
+						duration: 500,
 						useNativeDriver: false,
 					}),
 				]).start(() => {
@@ -68,12 +68,12 @@ function RestaurantCard({
 				Animated.parallel([
 					Animated.timing(x, {
 						toValue: -SCREEN_WIDTH,
-						duration: 200,
+						duration: 500,
 						useNativeDriver: false,
 					}),
 					Animated.timing(cardOpacity, {
 						toValue: 0,
-						duration: 200,
+						duration: 500,
 						useNativeDriver: false,
 					}),
 				]).start(() => {
