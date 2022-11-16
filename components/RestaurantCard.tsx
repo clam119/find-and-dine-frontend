@@ -1,5 +1,5 @@
 import React,{ useState } from "react";
-import {Text, Animated, PanResponder, Dimensions, } from "react-native";
+import {Text, Animated, PanResponder, Dimensions, ImageBackground} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import styles from "./styles";
@@ -94,9 +94,14 @@ function RestaurantCard({
 					transform: [{ translateX: x }, { rotate: rotateCard }],
 				},
 			]}>
+				<ImageBackground source={{uri: item.image}} resizeMode="cover" style={styles.backgroundImage}/>
 				<Text style={styles.cardTitle}>{item.title}</Text>
+				<Text style={styles.votes}>
+        {" "}
+        {"⭐".repeat(Math.round(item.votes))}
+      </Text>
 			<LinearGradient
-				colors={['#00000000', '#333333']}
+				colors={['#00000000', '#111111']}
 				style={styles.cardGradient}
 				start={[0.5, 0.7]}
 			/>

@@ -2,6 +2,10 @@ import { LinearGradient } from "expo-linear-gradient";
 import { StyleSheet, StatusBar } from "react-native";
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    height: '100%',
+    width: '100%',
+  },
   body: {
     width: "100%",
     height: "100%",
@@ -37,8 +41,9 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 24,
     position: 'absolute',
-    bottom: '5%',
+    bottom: '10%',
     zIndex: 2,
+    fontWeight: 'bold',
   },
   container: {
     width: "100%",
@@ -92,10 +97,11 @@ const styles = StyleSheet.create({
   },
   votes: {
     position: "absolute",
-    right: 0,
+    right: '3%',
     textAlign: "center",
-    bottom: 0,
+    bottom: '3%',
     margin: "1%",
+    zIndex: 2
     //transform: [{rotate: '90deg'}]
   },
 });
