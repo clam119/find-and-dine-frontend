@@ -27,13 +27,18 @@ const styles = StyleSheet.create({
     borderWidth: 3,
   },
   cardGradient: {
-    height: "95%",
+    height: "100%",
     width: "100%",
     borderRadius: 10,
+    position: 'absolute',
+    zIndex: 1
   },
   cardTitle: {
     color: '#ffffff',
     fontSize: 24,
+    position: 'absolute',
+    bottom: '5%',
+    zIndex: 2,
   },
   container: {
     width: "100%",

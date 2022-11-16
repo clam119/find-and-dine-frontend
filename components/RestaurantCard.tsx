@@ -94,7 +94,7 @@ function RestaurantCard({
 					transform: [{ translateX: x }, { rotate: rotateCard }],
 				},
 			]}>
-			<Text style={styles.cardTitle}>{item.title}</Text>
+				<Text style={styles.cardTitle}>{item.title}</Text>
 			<LinearGradient
 				colors={['#00000000', '#333333']}
 				style={styles.cardGradient}
