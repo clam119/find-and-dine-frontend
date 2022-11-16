@@ -1,6 +1,6 @@
-import React,{ useState } from "react";
+import React,{ useEffect, useState } from "react";
 import {Text, Animated, PanResponder, Dimensions, } from "react-native";
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from "./styles";
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -15,13 +15,40 @@ function RestaurantCard({
 	swipedDirection: Function;
   }) {
 
-	const [x, _] = useState(new Animated.Value(0));
 	let swipeDirection: string = '';
+
+	// Once we have the real data, we can go ahead & change this interface 
+	interface RestaurantObject {
+		id: String;
+		title: String;
+		image: String;
+		votes: Number;
+	}
+
+	useEffect(() => {
+		if(swipeDirection == 'Left')  {
+			const storeData = async (swipeDirectionValue: RestaurantObject) => {
+				try {
+				  const jsonValue = JSON.stringify(swipeDirectionValue)
+				  await AsyncStorage.setItem('Not-Interested', jsonValue)
+				} catch (e) {
+				  // saving error
+				  console.log(e, '<< ERROR NOT INTERESTED')
+				}
+			  }
+			  storeData(item)
+			  
+		}
+
+	}, [swipeDirection])
+
+	const [x, _] = useState(new Animated.Value(0));
 	let cardOpacity = new Animated.Value(1);
 	let rotateCard = x.interpolate({
 		inputRange: [-200, 0, 200],
 		outputRange: ['-15deg', '0deg', '15deg'],
 	});
+
 
 	let animation = PanResponder.create({
 		onStartShouldSetPanResponder: (evt, gestureState) => false,
@@ -34,6 +61,7 @@ function RestaurantCard({
 				swipeDirection = 'Right';
 			} else if (gestureState.dx < -SCREEN_WIDTH + 300) {
 				swipeDirection = 'Left';
+				console.log(item, '<< WHAT ARE YOU')
 			}
 		},
 		onPanResponderRelease: (evt, gestureState) => {

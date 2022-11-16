@@ -16,9 +16,11 @@ export default function HomePage() {
 	const [restaurantCardArray, setRestaurantCardArray] = useState(DEMO_CONTENT);
 	const [swipeDirection, setSwipeDirection] = useState('--');
 	const [id, setId] = useState('');
+
 	useEffect(() => {
 		if (swipeDirection !== '--' && parseInt(id) > 0) {
-			//console.log('remove card', id, swipeDirection);
+			setSwipeDirection('--');
+			console.log('remove card', id, swipeDirection);
 		}
 	}, [id, swipeDirection]);
 
