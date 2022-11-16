@@ -3,9 +3,6 @@ import {
 	View,
 	Text,
 	SafeAreaView,
-	Dimensions,
-	Animated,
-	PanResponder,
 } from 'react-native';
 
 import RestaurantCard from './RestaurantCard';
@@ -21,7 +18,7 @@ export default function HomePage() {
 	const [id, setId] = useState('');
 	useEffect(() => {
 		if (swipeDirection !== '--' && parseInt(id) > 0) {
-			console.log('remove card', id, swipeDirection);
+			//console.log('remove card', id, swipeDirection);
 		}
 	}, [id, swipeDirection]);
 
@@ -47,15 +44,12 @@ export default function HomePage() {
 					<RestaurantCard
 						key={key}
 						item={item}
-						removeCard={() => {
-							removeCard(item.id);
-							setId(item.id);
-						}}
+						removeCard={() => {removeCard(item.id); setId(item.id);}}
 						swipedDirection={lastSwipedDirection}
 					/>
 				))}
 				{noMoreRestaurants ? (
-					<Text style={{ fontSize: 22, color: '#000' }}>
+					<Text style={styles.cardTitle}>
 						No More Restaurants..
 					</Text>
 				) : null}

@@ -1,5 +1,5 @@
-import React ,{useState, useEffect, } from "react";
-import {Text, View, Animated, PanResponder, Dimensions, } from "react-native";
+import React,{ useState } from "react";
+import {Text, Animated, PanResponder, Dimensions, } from "react-native";
 
 import styles from "./styles";
 
@@ -14,8 +14,7 @@ function RestaurantCard({
 	removeCard: Function;
 	swipedDirection: Function;
   }) {
-  console.log(item)
-  
+
 	const [x, _] = useState(new Animated.Value(0));
 	let swipeDirection: string = '';
 	let cardOpacity = new Animated.Value(1);
@@ -88,8 +87,7 @@ function RestaurantCard({
   return (
     <Animated.View
 			{...animation.panHandlers}
-			style={[
-				styles.card,
+			style={[styles.card,
 				{
 					opacity: cardOpacity,
 					transform: [{ translateX: x }, { rotate: rotateCard }],
