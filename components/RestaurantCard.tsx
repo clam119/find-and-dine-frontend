@@ -15,6 +15,9 @@ function RestaurantCard({
 	swipedDirection: Function;
   }) {
 
+	const [notInterested, setNotInterested] = useState([]);
+	const [interested, setInterested] = useState([]);
+
 	let swipeDirection: string = '';
 
 	// Once we have the real data, we can go ahead & change this interface 
@@ -26,21 +29,9 @@ function RestaurantCard({
 	}
 
 	useEffect(() => {
-		if(swipeDirection == 'Left')  {
-			const storeData = async (swipeDirectionValue: RestaurantObject) => {
-				try {
-				  const jsonValue = JSON.stringify(swipeDirectionValue)
-				  await AsyncStorage.setItem('Not-Interested', jsonValue)
-				} catch (e) {
-				  // saving error
-				  console.log(e, '<< ERROR NOT INTERESTED')
-				}
-			  }
-			  storeData(item)
-			  
-		}
 
-	}, [swipeDirection])
+		console.log(notInterested)
+	},[notInterested])
 
 	const [x, _] = useState(new Animated.Value(0));
 	let cardOpacity = new Animated.Value(1);
@@ -77,6 +68,7 @@ function RestaurantCard({
 					useNativeDriver: false,
 				}).start();
 			} else if (gestureState.dx > SCREEN_WIDTH - 300) {
+				// Right Swipe
 				Animated.parallel([
 					Animated.timing(x, {
 						toValue: SCREEN_WIDTH,
@@ -93,6 +85,7 @@ function RestaurantCard({
 					removeCard();
 				});
 			} else if (gestureState.dx < -SCREEN_WIDTH + 300) {
+				// Left Swipe
 				Animated.parallel([
 					Animated.timing(x, {
 						toValue: -SCREEN_WIDTH,
@@ -106,6 +99,18 @@ function RestaurantCard({
 					}),
 				]).start(() => {
 					swipedDirection(swipeDirection);
+
+					const storeData = async (swipeDirectionValue: RestaurantObject) => {
+						try {
+						  const jsonValue = JSON.stringify(swipeDirectionValue)
+						  await AsyncStorage.setItem('Not-Interested', jsonValue);
+						  await AsyncStorage.mergeItem('Not-Inerested', jsonValue)
+						} catch (e) {
+						  // saving error
+						  console.log(e, '<< ERROR NOT INTERESTED')
+						}
+					  }
+					  storeData(item)
 					removeCard();
 				});
 			}
