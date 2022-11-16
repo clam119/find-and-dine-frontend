@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { StyleSheet, StatusBar } from "react-native";
 
 const styles = StyleSheet.create({
@@ -9,6 +10,11 @@ const styles = StyleSheet.create({
     top: 0,
     backgroundColor: "pink",
   },
+  bottomNavBar: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   card: {
     width: "85%",
     height: "85%",
@@ -19,6 +25,11 @@ const styles = StyleSheet.create({
     backgroundColor: "gray",
     borderColor: "black",
     borderWidth: 3,
+  },
+  cardGradient: {
+    height: "95%",
+    width: "100%",
+    borderRadius: 10,
   },
   cardTitle: {
     color: '#ffffff',
@@ -63,11 +74,6 @@ const styles = StyleSheet.create({
     width: 120,
     borderRadius: 10,
     margin: "2%",
-  },
-  bottomNavBar: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   title: {
     top: 20,
