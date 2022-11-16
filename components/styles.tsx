@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
   backgroundImage: {
     height: '100%',
     width: '100%',
+    borderRadius: 15,
+    overflow: 'hidden'
   },
   body: {
     width: "100%",
@@ -25,10 +27,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    borderRadius: 10,
-    backgroundColor: "gray",
+    borderRadius: 13,
+    backgroundColor: "transparent",
     borderColor: "black",
-    borderWidth: 3,
+    borderWidth: 0,
   },
   cardGradient: {
     height: "100%",
