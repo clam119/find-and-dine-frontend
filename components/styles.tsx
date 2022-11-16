@@ -2,6 +2,10 @@ import { LinearGradient } from "expo-linear-gradient";
 import { StyleSheet, StatusBar } from "react-native";
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    height: '100%',
+    width: '100%',
+  },
   body: {
     width: "100%",
     height: "100%",
