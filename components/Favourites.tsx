@@ -5,10 +5,10 @@ import ListTemplate from "./ListTemplate";
 
 export default function Favourites () {
     return (
-    <View style={styles.bottomNavBar}>
-    <Text>
+        <>
+        <Text style={styles.bottomNavBar}>
+        </Text>
         <ListTemplate/>
-    </Text>
-    </View>
+    </>
     )
 }

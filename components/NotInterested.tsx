@@ -5,8 +5,10 @@ import styles from "./styles";
 
 export default function NotInterested () {
     return (
-    <Text style={styles.bottomNavBar}>
-       <ListTemplate/>
-    </Text>
+    <>
+        <Text style={styles.bottomNavBar}>
+        </Text>
+        <ListTemplate/>
+    </>
     )
 }

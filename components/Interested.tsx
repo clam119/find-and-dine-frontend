@@ -5,8 +5,11 @@ import ListTemplate from "./ListTemplate";
 
 export default function Interested () {
     return (
-    <Text style={styles.bottomNavBar}>
+    <>
+        <Text style={styles.bottomNavBar}>
+        </Text>
         <ListTemplate/>
-    </Text>
+    </>
+
     )
 }
