@@ -1,5 +1,8 @@
+
 import React,{ useState, useRef} from "react";
-import { Text, Animated, PanResponder, Dimensions, Image } from "react-native";
+import {Text, Animated, PanResponder, Dimensions, ImageBackground, Image} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+
 import styles from "./styles";
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -113,8 +116,19 @@ function RestaurantCard({
 					transform: [{ translateX: x }, { rotate: rotateCard }],
 				},
 			]}>
+
 		
-				<Text style={styles.cardTitle}>{item.title}</Text>
+				<Image source={{ uri: item.image }} resizeMode="cover" style={[styles.backgroundImage]}/>
+		<Text style={styles.cardTitle}>{item.title}</Text>
+		<Text style={styles.votes}>
+{" "}
+{"⭐".repeat(Math.round(item.votes))}
+</Text>
+	<LinearGradient
+		colors={['#00000000', '#111111']}
+		style={styles.cardGradient}
+		start={[0.5, 0.7]}
+	/>
 				
 				<Animated.View style={[styles.helperIconRight, { opacity: opacityRightIcon, transform: [{rotate: rotateRightIcon}]}]}>
 				<Image
@@ -129,8 +143,8 @@ function RestaurantCard({
 					/>
 				</Animated.View>
 			</Animated.View>
-			
 			</>
+
   );
 }
 
