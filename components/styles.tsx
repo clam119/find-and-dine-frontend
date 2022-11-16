@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     backgroundColor: "pink",
   },
   card: {
-    width: "75%",
-    height: "75%",
+    width: "85%",
+    height: "85%",
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
