@@ -96,6 +96,10 @@ function RestaurantCard({
 			]}>
 				<ImageBackground source={{uri: item.image}} resizeMode="cover" style={styles.backgroundImage}/>
 				<Text style={styles.cardTitle}>{item.title}</Text>
+				<Text style={styles.votes}>
+        {" "}
+        {"⭐".repeat(Math.round(item.votes))}
+      </Text>
 			<LinearGradient
 				colors={['#00000000', '#111111']}
 				style={styles.cardGradient}
