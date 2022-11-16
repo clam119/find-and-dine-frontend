@@ -26,8 +26,8 @@ function RestaurantCard({
 	});
 
 	let opacityLeftIcon = x.interpolate({
-		inputRange: [-50, -10, 100],
-  		outputRange: [25, 0, 0],
+		inputRange: [-100, -20, 100],
+  		outputRange: [1, 0, 0],
 	});
 
 	let rotateLeftIcon = x.interpolate({
@@ -41,7 +41,7 @@ function RestaurantCard({
 	});
 
 	let opacityRightIcon = x.interpolate({
-		inputRange: [-100, 10, 50],
+		inputRange: [-100, 20, 100],
   		outputRange: [0, 0, 1],
 	});
 
