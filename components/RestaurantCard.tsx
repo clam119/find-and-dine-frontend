@@ -30,50 +30,50 @@ function RestaurantCard({
 		onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
 		onPanResponderMove: (evt, gestureState) => {
 			x.setValue(gestureState.dx);
-			if (gestureState.dx > SCREEN_WIDTH - 250) {
+			if (gestureState.dx > SCREEN_WIDTH - 300) {
 				swipeDirection = 'Right';
-			} else if (gestureState.dx < -SCREEN_WIDTH + 250) {
+			} else if (gestureState.dx < -SCREEN_WIDTH + 300) {
 				swipeDirection = 'Left';
 			}
 		},
 		onPanResponderRelease: (evt, gestureState) => {
 			if (
-				gestureState.dx < SCREEN_WIDTH - 150 &&
-				gestureState.dx > -SCREEN_WIDTH + 150
+				gestureState.dx < SCREEN_WIDTH - 270 &&
+				gestureState.dx > -SCREEN_WIDTH + 270
 			) {
 				swipedDirection('--');
 				Animated.spring(x, {
 					toValue: 0,
-					speed: 5,
+					speed: 1,
 					bounciness: 10,
 					useNativeDriver: false,
 				}).start();
-			} else if (gestureState.dx > SCREEN_WIDTH - 150) {
+			} else if (gestureState.dx > SCREEN_WIDTH - 300) {
 				Animated.parallel([
 					Animated.timing(x, {
 						toValue: SCREEN_WIDTH,
-						duration: 200,
+						duration: 500,
 						useNativeDriver: false,
 					}),
 					Animated.timing(cardOpacity, {
 						toValue: 0,
-						duration: 200,
+						duration: 500,
 						useNativeDriver: false,
 					}),
 				]).start(() => {
 					swipedDirection(swipeDirection);
 					removeCard();
 				});
-			} else if (gestureState.dx < -SCREEN_WIDTH + 150) {
+			} else if (gestureState.dx < -SCREEN_WIDTH + 300) {
 				Animated.parallel([
 					Animated.timing(x, {
 						toValue: -SCREEN_WIDTH,
-						duration: 200,
+						duration: 500,
 						useNativeDriver: false,
 					}),
 					Animated.timing(cardOpacity, {
 						toValue: 0,
-						duration: 200,
+						duration: 500,
 						useNativeDriver: false,
 					}),
 				]).start(() => {
