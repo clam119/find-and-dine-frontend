@@ -1,5 +1,6 @@
 import React,{ useState } from "react";
 import {Text, Animated, PanResponder, Dimensions, } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 import styles from "./styles";
 
@@ -93,7 +94,12 @@ function RestaurantCard({
 					transform: [{ translateX: x }, { rotate: rotateCard }],
 				},
 			]}>
-			<Text style={styles.cardTitle}>{item.title}</Text>
+				<Text style={styles.cardTitle}>{item.title}</Text>
+			<LinearGradient
+				colors={['#00000000', '#333333']}
+				style={styles.cardGradient}
+				start={[0.5, 0.7]}
+			/>
 		</Animated.View>
   );
 }
