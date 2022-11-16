@@ -1,14 +1,28 @@
 import { StyleSheet, StatusBar } from "react-native";
 
 const styles = StyleSheet.create({
+  body: {
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    position: "absolute",
+    top: 0,
+    backgroundColor: "pink",
+  },
   card: {
-    width: "75%",
-    height: "75%",
+    width: "85%",
+    height: "85%",
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
     borderRadius: 10,
     backgroundColor: "gray",
+    borderColor: "black",
+    borderWidth: 3,
+  },
+  cardTitle: {
+    color: '#ffffff',
+    fontSize: 24,
   },
   container: {
     width: "100%",
