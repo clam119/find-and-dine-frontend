@@ -1,19 +1,17 @@
-import React, { Key } from "react";
-import { View, Text } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import styles from "./styles";
 import HomePage from "./HomePage";
 import Favourites from "./Favourites";
 import NotInterested from "./NotInterested";
 import Interested from "./Interested";
 import {Ionicons} from "@expo/vector-icons";
 
+import { secondary, primary, surface, onSurface } from "./styles";
 const BottomNavButton = createBottomTabNavigator();
 
 export default function BottomNavBar() {
   return (
-    <BottomNavButton.Navigator
+    <BottomNavButton.Navigator 
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName: any;
@@ -28,8 +26,10 @@ export default function BottomNavBar() {
           }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "black",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: primary,
+        tabBarInactiveTintColor: secondary,
+        tabBarActiveBackgroundColor: onSurface,
+        tabBarInactiveBackgroundColor: surface
       })}
     >
       <BottomNavButton.Screen name="Home" component={HomePage} />

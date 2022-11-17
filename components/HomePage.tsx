@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, SafeAreaView } from "react-native";
 
 import RestaurantCard from "./RestaurantCard";
-import BottomNavBar from "./BottomNavBar";
+
 
 import styles from "./styles";
 import DEMO_CONTENT_I from "./ApiInterested";

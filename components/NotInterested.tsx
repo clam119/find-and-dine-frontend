@@ -12,11 +12,8 @@ export default function NotInterested () {
 
     return (
     <>
-        <Text style={styles.bottomNavBar}>
-        </Text>
-        <ListTemplate
-        list={DEMO_CONTENT_NI}
-        />
+        <Text style={styles.bottomNavBar}></Text>
+        <ListTemplate list={DEMO_CONTENT_NI}/>
     </>
     )
 }
