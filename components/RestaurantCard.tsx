@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState, useRef } from 'react';
-//import { useSelector, useDispatch } from 'react-redux';
-//import { store } from './redux/store';
-//import { addNotInterested, addInterested, resetNotInterested, resetInterested } from "./redux/action";
+import { useSelector, useDispatch } from 'react-redux';
+import { store } from './redux/store';
+import { addNotInterested, addInterested, resetNotInterested, resetInterested } from "./redux/action";
 import {
 	Text,
 	Animated,
@@ -10,7 +10,6 @@ import {
 	ImageBackground,
 	Image,
 	Modal,
-	Alert,
 	TouchableWithoutFeedback,
 	Pressable,
 	View,
@@ -29,8 +28,38 @@ function RestaurantCard({
 	item: any;
 	removeCard: Function;
 	swipedDirection: Function;
-}) {
-	const [modalSeen, setModalSeen] = useState(false);
+  }) {
+	interface Restaurant {
+		id: String;
+		title: String;
+		image: String;
+		review: Number;
+	}
+  const [modalSeen, setModalSeen] = useState(false);
+	const [ interested, setInterested] = useState({});
+	const [ notInterested, setNotInterested ] = useState({});
+
+	const dispatch = useDispatch();
+	
+	const handleAddNotInterested = (item: Restaurant) => {
+		dispatch(addNotInterested(item));
+		const storeStates = (store.getState());
+		const notInterestedState = storeStates.notInterested
+		console.log(notInterestedState)
+		console.log(notInterestedState.restaurants.length,'<< not interested array length')
+		setNotInterested({});
+	}
+
+	const handleAddInterested = (item: Restaurant) => {
+		dispatch(addInterested(item));
+		const storeStates = (store.getState());
+		const interestedState = storeStates.interested;
+		console.log(interestedState.restaurants.length,'<< interested array length')
+		setInterested({});
+	}
+	
+	const [modalSeen, setModalSeen] = useState(false)
+
 
 	const [x, _] = useState(new Animated.Value(0));
 	let swipeDirection: string = '';
@@ -97,35 +126,39 @@ function RestaurantCard({
 					useNativeDriver: false,
 				}).start();
 			} else if (gestureState.dx > SCREEN_WIDTH - 300) {
-				Animated.parallel([
-					Animated.timing(x, {
-						toValue: SCREEN_WIDTH,
-						duration: 500,
-						useNativeDriver: false,
-					}),
-					Animated.timing(cardOpacity, {
-						toValue: 0,
-						duration: 500,
-						useNativeDriver: false,
-					}),
-				]).start(() => {
-					swipedDirection(swipeDirection);
+				// Right Swipe - Interested
+                Animated.parallel([
+                    Animated.timing(x, {
+                        toValue: SCREEN_WIDTH,
+                        duration: 500,
+                        useNativeDriver: false,
+                    }),
+                    Animated.timing(cardOpacity, {
+                        toValue: 0,
+                        duration: 500,
+                        useNativeDriver: false,
+                    }),
+                ]).start(() => {
+                    swipedDirection(swipeDirection);
+					handleAddInterested(item);
 					removeCard();
-				});
-			} else if (gestureState.dx < -SCREEN_WIDTH + 300) {
-				Animated.parallel([
-					Animated.timing(x, {
-						toValue: -SCREEN_WIDTH,
-						duration: 500,
-						useNativeDriver: false,
-					}),
-					Animated.timing(cardOpacity, {
-						toValue: 0,
-						duration: 500,
-						useNativeDriver: false,
-					}),
-				]).start(() => {
-					swipedDirection(swipeDirection);
+                });
+            } else if (gestureState.dx < -SCREEN_WIDTH + 300) {
+				// Left Swipe - Not Interested
+                Animated.parallel([
+                    Animated.timing(x, {
+                        toValue: -SCREEN_WIDTH,
+                        duration: 500,
+                        useNativeDriver: false,
+                    }),
+                    Animated.timing(cardOpacity, {
+                        toValue: 0,
+                        duration: 500,
+                        useNativeDriver: false,
+                    }),
+                ]).start(() => {
+                    swipedDirection(swipeDirection);
+					handleAddNotInterested(item);
 					removeCard();
 				});
 			}

@@ -219,6 +219,18 @@ const styles = StyleSheet.create(
     left: '4.5%',
     zIndex: 2
   },
+  button: {
+    margin: 10,
+    padding: 10,
+    backgroundColor: 'orange',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+  },
+  buttonText: {
+    fontSize: 18,
+    color: '#444',
+  },
 
 });
 
