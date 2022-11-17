@@ -1,14 +1,15 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Text } from "react-native";
 import styles from "./styles";
 import ListTemplate from "./ListTemplate";
 
-export default function Favourites () {
-    return (
-        <>
-        <Text style={styles.bottomNavBar}>
-        </Text>
-        <ListTemplate/>
+import DEMO_CONTENT_F from "./ApiFavourites";
+
+export default function Favourites() {
+  return (
+    <>
+      <Text style={styles.bottomNavBar}></Text>
+      <ListTemplate list={DEMO_CONTENT_F} />
     </>
-    )
+  );
 }

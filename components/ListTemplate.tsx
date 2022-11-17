@@ -2,17 +2,12 @@ import React from "react";
 import {
   SafeAreaView,
   View,
-  FlatList,
-  StyleSheet,
   Text,
-  StatusBar,
   Image,
-  Button,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
 } from "react-native";
-import { SwipeListView, SwipeRow } from 'react-native-swipe-list-view';
+import { SwipeListView } from "react-native-swipe-list-view";
 
-import DEMO_CONTENT from "./Api";
 import styles from "./styles";
 
 interface ObjectInterface {
@@ -44,30 +39,46 @@ const Item = (props: ObjectInterface) => {
   );
 };
 
-export default function ListTemplate (){
-  const renderItem = ({ item }:any) => <Item item={item} />;
+export default function ListTemplate(list) {
+  const renderItem = ({ item }: any) => <Item item={item} />;
 
-  return (<SafeAreaView>
-    <SwipeListView
+  return (
+    <SafeAreaView>
+      <SwipeListView
         contentContainerStyle={styles.containerList}
-        data={DEMO_CONTENT}
+        data={list.list}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         renderHiddenItem={() => (
           <View style={styles.delete}>
-            <TouchableWithoutFeedback  onPress={() => { console.log('YES') }}>
-            <Image style={styles.logo} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png'}}/> 
+            <TouchableWithoutFeedback
+              onPress={() => {
+                console.log("YES");
+              }}
+            >
+              <Image
+                style={styles.logo}
+                source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+              />
             </TouchableWithoutFeedback>
-            <TouchableWithoutFeedback style={styles.logo} onPress={() => { console.log('NO') }}>
-<Image style={styles.logo} source={{
-uri: 'https://reactnative.dev/img/tiny_logo.png',
-}}/> 
-</TouchableWithoutFeedback>
+            <TouchableWithoutFeedback
+              style={styles.logo}
+              onPress={() => {
+                console.log("NO");
+              }}
+            >
+              <Image
+                style={styles.logo}
+                source={{
+                  uri: "https://reactnative.dev/img/tiny_logo.png",
+                }}
+              />
+            </TouchableWithoutFeedback>
           </View>
-      )}
-      leftOpenValue={75}
-      rightOpenValue={-75}
-    />
+        )}
+        leftOpenValue={75}
+        rightOpenValue={-75}
+      />
     </SafeAreaView>
   );
-};
+}
