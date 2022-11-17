@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { store } from './redux/store';
 import { addNotInterested, addInterested, resetNotInterested, resetInterested } from "./redux/action";
 import {Text, Animated, PanResponder, Dimensions, ImageBackground, Image, Modal, Alert, TouchableWithoutFeedback} from "react-native";
-import styles from "./styles";
 
 import { LinearGradient } from "expo-linear-gradient";
 
