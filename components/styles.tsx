@@ -56,12 +56,19 @@ const styles = StyleSheet.create({
     backgroundColor: "lightblue",
   },
   containerList: {
-    marginTop: StatusBar.currentHeight || 0,
     width: "100%",
-    top: "10%",
-    flexDirection: "row",
+    top: 0,
+  },
+  delete: {
+    width: "100%",
+    height: "100%",
+    flexDirection:'row',
+    justifyContent: "space-between",
     alignItems: "center",
-    justifyContent: "center",
+    top: 0,
+  },
+  deleteC: {
+    
   },
   header: {
     width: "100%",
@@ -91,20 +98,23 @@ const styles = StyleSheet.create({
     zIndex: 2
   },
   item: {
-    flexDirection: "row",
+    width: "90%",
+    flexDirection:'row',
+    alignSelf:'center',
     backgroundColor: "gray",
     marginTop: "1%",
     marginBottom: "1%",
     marginLeft: "2%",
     marginRight: "2%",
     borderRadius: 10,
+    
   },
   logo: {
     aspectRatio: 1,
     height: 60,
     width: 120,
     borderRadius: 10,
-    margin: "2%",
+    margin: "0%",
   },
   title: {
     top: 20,

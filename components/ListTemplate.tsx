@@ -7,7 +7,10 @@ import {
   Text,
   StatusBar,
   Image,
+  Button,
+  TouchableWithoutFeedback
 } from "react-native";
+import { SwipeListView, SwipeRow } from 'react-native-swipe-list-view';
 
 import DEMO_CONTENT from "./Api";
 import styles from "./styles";
@@ -42,16 +45,29 @@ const Item = (props: ObjectInterface) => {
 };
 
 export default function ListTemplate (){
-  const renderItem = ({ item }) => <Item item={item} />;
+  const renderItem = ({ item }:any) => <Item item={item} />;
 
-  return (
-    <SafeAreaView style={styles.containerList}>
-      <FlatList
+  return (<SafeAreaView>
+    <SwipeListView
+        contentContainerStyle={styles.containerList}
         data={DEMO_CONTENT}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
-      />
+        renderHiddenItem={() => (
+          <View style={styles.delete}>
+            <TouchableWithoutFeedback  onPress={() => { console.log('YES') }}>
+            <Image style={styles.logo} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png'}}/> 
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback style={styles.logo} onPress={() => { console.log('NO') }}>
+<Image style={styles.logo} source={{
+uri: 'https://reactnative.dev/img/tiny_logo.png',
+}}/> 
+</TouchableWithoutFeedback>
+          </View>
+      )}
+      leftOpenValue={75}
+      rightOpenValue={-75}
+    />
     </SafeAreaView>
   );
 };
-
