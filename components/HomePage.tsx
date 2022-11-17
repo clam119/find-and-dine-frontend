@@ -8,17 +8,19 @@ import styles from "./styles";
 import DEMO_CONTENT_I from "./ApiInterested";
 
 export default function HomePage() {
-  const [noMoreRestaurants, setNoMoreRestaurants] = useState(false);
-  const [restaurantCardArray, setRestaurantCardArray] =
-    useState(DEMO_CONTENT_I);
-  const [swipeDirection, setSwipeDirection] = useState("--");
-  const [id, setId] = useState("");
-  useEffect(() => {
-    if (swipeDirection !== "--" && parseInt(id) > 0) {
-      //console.log('remove card', id, swipeDirection);
-    }
-    setSwipeDirection("--");
-  }, [id, swipeDirection]);
+
+	const [noMoreRestaurants, setNoMoreRestaurants] = useState(false);
+	const [restaurantCardArray, setRestaurantCardArray] = useState(DEMO_CONTENT_I);
+	const [swipeDirection, setSwipeDirection] = useState('--');
+	const [id, setId] = useState('');
+
+	useEffect(() => {
+		if (swipeDirection !== '--' && parseInt(id) > 0) {
+			setSwipeDirection('--');
+			// console.log('remove card', id, swipeDirection);
+		}
+	}, [id, swipeDirection]);
+
 
   const removeCard = (id: string) => {
     restaurantCardArray.splice(
