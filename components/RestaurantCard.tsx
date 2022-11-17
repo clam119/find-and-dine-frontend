@@ -1,6 +1,8 @@
-import React,{ useEffect, useState } from "react";
+import React,{ useContext, useEffect, useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import store from './redux/store';
+import { addNotInterested, addInterested } from "./redux/action";
 import {Text, Animated, PanResponder, Dimensions, } from "react-native";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from "./styles";
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -15,8 +17,27 @@ function RestaurantCard({
 	swipedDirection: Function;
   }) {
 
-	const [notInterested, setNotInterested] = useState([]);
-	const [interested, setInterested] = useState([]);
+	const [ notInterested, setNotInterested ] = useState({});
+	const [ interested, setInterested] = useState({});
+
+	const dispatch = useDispatch();
+
+	const handleAddNotInterested = (item) => {
+		dispatch(addNotInterested(item));
+		const storeStates = (store.getState());
+		const notInterestedState = storeStates.notInterested
+		console.log(notInterestedState.restaurants.length,'<< interested array')
+		setNotInterested({});
+	}
+
+	const handleAddInterested = (item) => {
+		dispatch(addInterested(item));
+		const storeStates = (store.getState());
+		const interestedState = storeStates.interested;
+		console.log(interestedState.restaurants.length,'<< interested array')
+		setInterested({});
+	}
+
 
 	let swipeDirection: string = '';
 
@@ -27,11 +48,6 @@ function RestaurantCard({
 		image: String;
 		votes: Number;
 	}
-
-	useEffect(() => {
-
-		console.log(notInterested)
-	},[notInterested])
 
 	const [x, _] = useState(new Animated.Value(0));
 	let cardOpacity = new Animated.Value(1);
@@ -52,7 +68,6 @@ function RestaurantCard({
 				swipeDirection = 'Right';
 			} else if (gestureState.dx < -SCREEN_WIDTH + 300) {
 				swipeDirection = 'Left';
-				console.log(item, '<< WHAT ARE YOU')
 			}
 		},
 		onPanResponderRelease: (evt, gestureState) => {
@@ -68,7 +83,7 @@ function RestaurantCard({
 					useNativeDriver: false,
 				}).start();
 			} else if (gestureState.dx > SCREEN_WIDTH - 300) {
-				// Right Swipe
+				// Right Swipe - Interested
 				Animated.parallel([
 					Animated.timing(x, {
 						toValue: SCREEN_WIDTH,
@@ -82,10 +97,11 @@ function RestaurantCard({
 					}),
 				]).start(() => {
 					swipedDirection(swipeDirection);
+					handleAddInterested(item);
 					removeCard();
 				});
 			} else if (gestureState.dx < -SCREEN_WIDTH + 300) {
-				// Left Swipe
+				// Left Swipe - Not Interested
 				Animated.parallel([
 					Animated.timing(x, {
 						toValue: -SCREEN_WIDTH,
@@ -99,18 +115,7 @@ function RestaurantCard({
 					}),
 				]).start(() => {
 					swipedDirection(swipeDirection);
-
-					const storeData = async (swipeDirectionValue: RestaurantObject) => {
-						try {
-						  const jsonValue = JSON.stringify(swipeDirectionValue)
-						  await AsyncStorage.setItem('Not-Interested', jsonValue);
-						  await AsyncStorage.mergeItem('Not-Inerested', jsonValue)
-						} catch (e) {
-						  // saving error
-						  console.log(e, '<< ERROR NOT INTERESTED')
-						}
-					  }
-					  storeData(item)
+					handleAddNotInterested(item);
 					removeCard();
 				});
 			}
