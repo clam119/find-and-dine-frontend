@@ -35,6 +35,9 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 0,
   },
+  cardExpanded: {
+    backgroundColor: "purple",
+  },
   cardGradient: {
     height: "100%",
     width: "100%",
@@ -69,9 +72,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     top: 0,
-  },
-  deleteC: {
-    
   },
   header: {
     width: "100%",

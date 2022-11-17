@@ -1,6 +1,11 @@
 
-import React,{ useState, useRef} from "react";
-import {Text, Animated, PanResponder, Dimensions, ImageBackground, Image} from "react-native";
+import React,{ useContext, useEffect, useState,  useRef } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { store } from './redux/store';
+import { addNotInterested, addInterested, resetNotInterested, resetInterested } from "./redux/action";
+import {Text, Animated, PanResponder, Dimensions, ImageBackground, Image, Modal, Alert, TouchableWithoutFeedback} from "react-native";
+import styles from "./styles";
+
 import { LinearGradient } from "expo-linear-gradient";
 
 import styles from "./styles";
@@ -15,6 +20,7 @@ function RestaurantCard({
 	removeCard: Function;
 	swipedDirection: Function;
   }) {
+	const [modalSeen, setModalSeen] = useState(false)
 
 	const [x, _] = useState(new Animated.Value(0));
 	let swipeDirection: string = '';
@@ -108,6 +114,13 @@ function RestaurantCard({
   
 	return (
 		<>
+		<Modal animationType="slide" transparent={false} visible={modalSeen} onRequestClose={() => {
+			Alert.alert('Closed');
+			setModalSeen(!modalSeen);
+		}}
+		>
+		<Text style={styles.card}>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</Text>
+		</Modal>
     <Animated.View
 			{...animation.panHandlers}
 			style={[styles.card,
@@ -117,29 +130,36 @@ function RestaurantCard({
 				},
 			]}>
 
-		
-				<Image source={{ uri: item.image }} resizeMode="cover" style={[styles.backgroundImage]}/>
-		<Text style={styles.cardTitle}>{item.title}</Text>
-		<Text style={styles.votes}>
-{" "}
-{"⭐".repeat(Math.round(item.votes))}
-</Text>
-	<LinearGradient
+		<TouchableWithoutFeedback
+		style={styles.backgroundImage}
+			onPress= {() => {
+				setModalSeen(true)
+			}}
+			>
+
+		<LinearGradient
 		colors={['#00000000', '#111111']}
 		style={styles.cardGradient}
 		start={[0.5, 0.7]}
-	/>
+		/>
+		</TouchableWithoutFeedback>
+		<Image source={{ uri: item.image }} resizeMode="cover" style={[styles.backgroundImage]}/>
+		<Text style={styles.cardTitle}>{item.title}</Text>
+		<Text style={styles.votes}>
+			{" "}
+			{"⭐".repeat(Math.round(item.votes))}
+		</Text>
 				
 				<Animated.View style={[styles.helperIconRight, { opacity: opacityRightIcon, transform: [{rotate: rotateRightIcon}]}]}>
 				<Image
-        style={[styles.helperIconRight]}
-        source={require('../assets/heart-outline.png')}
+        			style={[styles.helperIconRight]}
+        			source={require('../assets/heart-outline.png')}
 					/>
 				</Animated.View>
 				<Animated.View style={[styles.helperIconLeft, { opacity: opacityLeftIcon, transform: [{rotate: rotateLeftIcon}]}]}>
 				<Image
 						style={[styles.helperIconLeft, ]}
-        source={require('../assets/heart-dislike-outline.png')}
+        				source={require('../assets/heart-dislike-outline.png')}
 					/>
 				</Animated.View>
 			</Animated.View>
