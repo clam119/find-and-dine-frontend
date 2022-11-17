@@ -20,7 +20,7 @@ export default function HomePage() {
 	useEffect(() => {
 		if (swipeDirection !== '--' && parseInt(id) > 0) {
 			setSwipeDirection('--');
-			console.log('remove card', id, swipeDirection);
+			// console.log('remove card', id, swipeDirection);
 		}
 	}, [id, swipeDirection]);
 
