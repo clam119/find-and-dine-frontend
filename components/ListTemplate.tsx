@@ -2,14 +2,12 @@ import React from "react";
 import {
   SafeAreaView,
   View,
-  FlatList,
-  StyleSheet,
   Text,
-  StatusBar,
   Image,
+  TouchableWithoutFeedback,
 } from "react-native";
+import { SwipeListView } from "react-native-swipe-list-view";
 
-import DEMO_CONTENT from "./Api";
 import styles from "./styles";
 
 interface ObjectInterface {
@@ -41,17 +39,46 @@ const Item = (props: ObjectInterface) => {
   );
 };
 
-export default function ListTemplate (){
-  const renderItem = ({ item }) => <Item item={item} />;
+export default function ListTemplate(list) {
+  const renderItem = ({ item }: any) => <Item item={item} />;
 
   return (
-    <SafeAreaView style={styles.containerList}>
-      <FlatList
-        data={DEMO_CONTENT}
+    <SafeAreaView>
+      <SwipeListView
+        contentContainerStyle={styles.containerList}
+        data={list.list}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
+        renderHiddenItem={() => (
+          <View style={styles.delete}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                console.log("YES");
+              }}
+            >
+              <Image
+                style={styles.logo}
+                source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+              />
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback
+              style={styles.logo}
+              onPress={() => {
+                console.log("NO");
+              }}
+            >
+              <Image
+                style={styles.logo}
+                source={{
+                  uri: "https://reactnative.dev/img/tiny_logo.png",
+                }}
+              />
+            </TouchableWithoutFeedback>
+          </View>
+        )}
+        leftOpenValue={75}
+        rightOpenValue={-75}
       />
     </SafeAreaView>
   );
-};
-
+}

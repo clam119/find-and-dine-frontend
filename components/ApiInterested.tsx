@@ -1,10 +1,10 @@
-interface DEMO_CONTENT {
+interface DEMO_CONTENT_I {
   id: String;
   title: String;
   image: String;
   review: Number;
 }
-const DEMO_CONTENT = [
+const DEMO_CONTENT_I = [
   {
     id: "13811970880719370165",
     title: "Archie's",
@@ -77,4 +77,5 @@ const DEMO_CONTENT = [
   },
 ];
 
-export default DEMO_CONTENT;
+
+export default DEMO_CONTENT_I

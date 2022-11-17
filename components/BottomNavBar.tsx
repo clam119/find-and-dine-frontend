@@ -7,12 +7,7 @@ import HomePage from "./HomePage";
 import Favourites from "./Favourites";
 import NotInterested from "./NotInterested";
 import Interested from "./Interested";
-import {
-  Ionicons,
-  MaterialCommunityIcons,
-  Octicons,
-  Feather,
-} from "@expo/vector-icons";
+import {Ionicons} from "@expo/vector-icons";
 
 const BottomNavButton = createBottomTabNavigator();
 

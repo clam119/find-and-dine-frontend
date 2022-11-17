@@ -6,10 +6,15 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { store } from './redux/store';
 import {  resetNotInterested  } from "./redux/action";
+import { useNavigation } from "@react-navigation/native";
+import DEMO_CONTENT_NI from "./ApiNotInterested";
 
+
+
+const navigation = useNavigation()
 export default function NotInterested () {
 
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const handleResetNotInterested = () => {
       dispatch(resetNotInterested);
@@ -17,8 +22,6 @@ export default function NotInterested () {
       console.log(storeStates, '< all state');
       console.log(storeStates.notInterested);
     }
-
-   
 
     return (
     <>
@@ -28,7 +31,9 @@ export default function NotInterested () {
         
         <Text style={styles.bottomNavBar}>
         </Text>
-        <ListTemplate/>
+        <ListTemplate
+        list={DEMO_CONTENT_NI}
+        />
     </>
     )
 }

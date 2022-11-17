@@ -1,6 +1,13 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { StyleSheet, StatusBar } from "react-native";
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    height: '100%',
+    width: '100%',
+    borderRadius: 15,
+    overflow: 'hidden'
+  },
   body: {
     width: "100%",
     height: "100%",
@@ -9,20 +16,36 @@ const styles = StyleSheet.create({
     top: 0,
     backgroundColor: "pink",
   },
+  bottomNavBar: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   card: {
     width: "85%",
     height: "85%",
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    borderRadius: 10,
-    backgroundColor: "gray",
+    borderRadius: 13,
+    backgroundColor: "transparent",
     borderColor: "black",
-    borderWidth: 3,
+    borderWidth: 0,
+  },
+  cardGradient: {
+    height: "100%",
+    width: "100%",
+    borderRadius: 10,
+    position: 'absolute',
+    zIndex: 1
   },
   cardTitle: {
     color: '#ffffff',
     fontSize: 24,
+    position: 'absolute',
+    bottom: '10%',
+    zIndex: 2,
+    fontWeight: 'bold',
   },
   container: {
     width: "100%",
@@ -33,12 +56,19 @@ const styles = StyleSheet.create({
     backgroundColor: "lightblue",
   },
   containerList: {
-    marginTop: StatusBar.currentHeight || 0,
     width: "100%",
-    top: "10%",
-    flexDirection: "row",
+    top: 0,
+  },
+  delete: {
+    width: "100%",
+    height: "100%",
+    flexDirection:'row',
+    justifyContent: "space-between",
     alignItems: "center",
-    justifyContent: "center",
+    top: 0,
+  },
+  deleteC: {
+    
   },
   header: {
     width: "100%",
@@ -48,26 +78,43 @@ const styles = StyleSheet.create({
     top: 0,
     backgroundColor: "pink",
   },
+  helperIconLeft: {
+    position: "absolute",
+    top: '6%',
+    right: '10%',
+    aspectRatio: 1,
+    width: 50,
+    height: 50,
+    fill: 'pink',
+    zIndex: 2
+  },
+  helperIconRight: {
+    position: "absolute",
+    top: '6%',
+    left: '10%',
+    aspectRatio: 1,
+    width: 50,
+    height: 50,
+    zIndex: 2
+  },
   item: {
-    flexDirection: "row",
+    width: "90%",
+    flexDirection:'row',
+    alignSelf:'center',
     backgroundColor: "gray",
     marginTop: "1%",
     marginBottom: "1%",
     marginLeft: "2%",
     marginRight: "2%",
     borderRadius: 10,
+    
   },
   logo: {
     aspectRatio: 1,
     height: 60,
     width: 120,
     borderRadius: 10,
-    margin: "2%",
-  },
-  bottomNavBar: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    margin: "0%",
   },
   title: {
     top: 20,
@@ -81,11 +128,11 @@ const styles = StyleSheet.create({
   },
   votes: {
     position: "absolute",
-    right: 0,
+    right: '3%',
     textAlign: "center",
-    bottom: 0,
+    bottom: '3%',
     margin: "1%",
-    //transform: [{rotate: '90deg'}]
+    zIndex: 2
   },
   button: {
     margin: 10,
