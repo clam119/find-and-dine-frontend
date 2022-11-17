@@ -1,7 +1,7 @@
 import React,{ useContext, useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import store from './redux/store';
-import { addNotInterested, addInterested } from "./redux/action";
+import { store } from './redux/store';
+import { addNotInterested, addInterested, resetNotInterested, resetInterested } from "./redux/action";
 import {Text, Animated, PanResponder, Dimensions, } from "react-native";
 import styles from "./styles";
 
@@ -21,12 +21,13 @@ function RestaurantCard({
 	const [ interested, setInterested] = useState({});
 
 	const dispatch = useDispatch();
-
+	
 	const handleAddNotInterested = (item) => {
 		dispatch(addNotInterested(item));
 		const storeStates = (store.getState());
 		const notInterestedState = storeStates.notInterested
-		console.log(notInterestedState.restaurants.length,'<< interested array')
+		// console.log(notInterestedState)
+		// console.log(notInterestedState.restaurants,'<< not interested array length')
 		setNotInterested({});
 	}
 
@@ -34,7 +35,7 @@ function RestaurantCard({
 		dispatch(addInterested(item));
 		const storeStates = (store.getState());
 		const interestedState = storeStates.interested;
-		console.log(interestedState.restaurants.length,'<< interested array')
+		// console.log(interestedState.restaurants.length,'<< interested array length')
 		setInterested({});
 	}
 
