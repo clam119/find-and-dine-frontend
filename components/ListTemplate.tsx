@@ -7,6 +7,7 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import { SwipeListView } from "react-native-swipe-list-view";
+import {Ionicons} from "@expo/vector-icons";
 
 import styles from "./styles";
 
@@ -56,10 +57,7 @@ export default function ListTemplate(list) {
                 console.log("YES");
               }}
             >
-              <Image
-                style={styles.logo}
-                source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
-              />
+         <Ionicons name="refresh" size={40} color="#50C878" style={styles.refreshIcon} />
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback
               style={styles.logo}
@@ -67,12 +65,7 @@ export default function ListTemplate(list) {
                 console.log("NO");
               }}
             >
-              <Image
-                style={styles.logo}
-                source={{
-                  uri: "https://reactnative.dev/img/tiny_logo.png",
-                }}
-              />
+          <Ionicons name="trash-bin" size={40} color="#DC143C" style={styles.binIcon} />
             </TouchableWithoutFeedback>
           </View>
         )}

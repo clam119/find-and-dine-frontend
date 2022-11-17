@@ -21,6 +21,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  binIcon: {
+    right: "26%"
+  },
   card: {
     width: "85%",
     height: "85%",
@@ -107,7 +110,6 @@ const styles = StyleSheet.create({
     marginLeft: "2%",
     marginRight: "2%",
     borderRadius: 10,
-    
   },
   logo: {
     aspectRatio: 1,
@@ -115,6 +117,9 @@ const styles = StyleSheet.create({
     width: 120,
     borderRadius: 10,
     margin: "0%",
+  },
+  refreshIcon:{
+    left: "27%",
   },
   title: {
     top: 20,
@@ -134,6 +139,7 @@ const styles = StyleSheet.create({
     margin: "1%",
     zIndex: 2
   },
+
 });
 
 export default styles;
