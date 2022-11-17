@@ -71,6 +71,25 @@ const styles = StyleSheet.create({
     top: 0,
     backgroundColor: "pink",
   },
+  helperIconLeft: {
+    position: "absolute",
+    top: '6%',
+    right: '10%',
+    aspectRatio: 1,
+    width: 50,
+    height: 50,
+    fill: 'pink',
+    zIndex: 2
+  },
+  helperIconRight: {
+    position: "absolute",
+    top: '6%',
+    left: '10%',
+    aspectRatio: 1,
+    width: 50,
+    height: 50,
+    zIndex: 2
+  },
   item: {
     flexDirection: "row",
     backgroundColor: "gray",
@@ -104,7 +123,6 @@ const styles = StyleSheet.create({
     bottom: '3%',
     margin: "1%",
     zIndex: 2
-    //transform: [{rotate: '90deg'}]
   },
 });
 
