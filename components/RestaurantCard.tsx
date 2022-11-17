@@ -19,6 +19,36 @@ function RestaurantCard({
 	removeCard: Function;
 	swipedDirection: Function;
   }) {
+
+	interface Restaurant {
+		id: String;
+		title: String;
+		image: String;
+		review: Number;
+	}
+
+	const [ interested, setInterested] = useState({});
+	const [ notInterested, setNotInterested ] = useState({});
+
+	const dispatch = useDispatch();
+	
+	const handleAddNotInterested = (item: Restaurant) => {
+		dispatch(addNotInterested(item));
+		const storeStates = (store.getState());
+		const notInterestedState = storeStates.notInterested
+		console.log(notInterestedState)
+		console.log(notInterestedState.restaurants.length,'<< not interested array length')
+		setNotInterested({});
+	}
+
+	const handleAddInterested = (item: Restaurant) => {
+		dispatch(addInterested(item));
+		const storeStates = (store.getState());
+		const interestedState = storeStates.interested;
+		console.log(interestedState.restaurants.length,'<< interested array length')
+		setInterested({});
+	}
+	
 	const [modalSeen, setModalSeen] = useState(false)
 
 	const [x, _] = useState(new Animated.Value(0));
@@ -76,6 +106,7 @@ function RestaurantCard({
                     useNativeDriver: false,
 				}).start();
 			} else if (gestureState.dx > SCREEN_WIDTH - 300) {
+				// Right Swipe - Interested
                 Animated.parallel([
                     Animated.timing(x, {
                         toValue: SCREEN_WIDTH,
@@ -89,9 +120,11 @@ function RestaurantCard({
                     }),
                 ]).start(() => {
                     swipedDirection(swipeDirection);
+					handleAddInterested(item);
 					removeCard();
                 });
             } else if (gestureState.dx < -SCREEN_WIDTH + 300) {
+				// Left Swipe - Not Interested
                 Animated.parallel([
                     Animated.timing(x, {
                         toValue: -SCREEN_WIDTH,
@@ -105,6 +138,7 @@ function RestaurantCard({
                     }),
                 ]).start(() => {
                     swipedDirection(swipeDirection);
+					handleAddNotInterested(item);
 					removeCard();
                 });
             }
