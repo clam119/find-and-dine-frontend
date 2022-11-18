@@ -12,6 +12,7 @@ import {Ionicons} from "@expo/vector-icons";
 import styles from "./styles";
 
 interface ObjectInterface {
+  item: any;
 
 }
 
@@ -37,7 +38,7 @@ const Item = (props: ObjectInterface) => {
   );
 };
 
-export default function ListTemplate(list) {
+export default function ListTemplate(list: { list: any | readonly object[] | null | undefined; }) {
   const renderItem = ({ item }: any) => <Item item={item} />;
 
   return (
@@ -46,7 +47,7 @@ export default function ListTemplate(list) {
         contentContainerStyle={styles.containerList}
         data={list.list}
         renderItem={renderItem}
-        keyExtractor={(item:object) => item.id}
+        keyExtractor={(item:any) => item.id}
         renderHiddenItem={() => (
           <View style={styles.delete}>
             <TouchableWithoutFeedback
