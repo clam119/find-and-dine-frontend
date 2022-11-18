@@ -117,7 +117,7 @@ const styles = StyleSheet.create(
     position: 'absolute',
     width: '48%',
     height: '40%',
-
+    borderRadius: 10,
   },
   expandedGallery: {
     backgroundColor: background,
@@ -126,6 +126,7 @@ const styles = StyleSheet.create(
     top: '41%',
     width: '98%',
     height: '58%',
+    borderRadius: 10,
   },
   expandedReviews: {
     backgroundColor: background,
@@ -133,7 +134,8 @@ const styles = StyleSheet.create(
     position: 'absolute',
     width: '47%',
     height: '40%',
-    left:'50%'
+    left: '50%',
+    borderRadius: 10,
 
   },
   header: {
