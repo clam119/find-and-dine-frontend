@@ -35,7 +35,7 @@ function RestaurantCard({
 		image: String;
 		review: Number;
 	}
-  const [modalSeen, setModalSeen] = useState(false);
+  	const [modalSeen, setModalSeen] = useState(false);
 	const [ interested, setInterested] = useState({});
 	const [ notInterested, setNotInterested ] = useState({});
 
@@ -57,9 +57,6 @@ function RestaurantCard({
 		console.log(interestedState.restaurants.length,'<< interested array length')
 		setInterested({});
 	}
-	
-	const [modalSeen, setModalSeen] = useState(false)
-
 
 	const [x, _] = useState(new Animated.Value(0));
 	let swipeDirection: string = '';
