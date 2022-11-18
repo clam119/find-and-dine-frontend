@@ -27,7 +27,6 @@ export default function NotInterested () {
         <Pressable onPress={ handleResetNotInterested } style={styles.button}>
           <Text style={styles.buttonText}>RESET NOT INTERESTED</Text>
         </Pressable>
-        
         <Text style={styles.bottomNavBar}></Text>
         <ListTemplate list={DEMO_CONTENT_NI}/>
     </>

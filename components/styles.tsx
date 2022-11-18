@@ -1,7 +1,32 @@
-import { LinearGradient } from "expo-linear-gradient";
-import { StyleSheet, StatusBar } from "react-native";
+import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+/*
+import { Appearance, useColorScheme } from 'react-native';
+const theme = () => {
+  if (useColorScheme() === 'dark') {
+    // render some dark thing
+  } else {
+    // render some light thing
+  }
+}; theme()
+*/
+
+export const primary = 'black'
+export const primaryVariant = 'darkgray'
+export const secondary = 'gray'
+export const secondaryVariant = 'darkgray'
+
+export const onPrimary = 'white'
+export const onSecondary = 'gray'
+export const onSurface = 'transparent'
+export const onBackground = 'yellow'
+
+export const surface = 'lightgray'
+export const background = 'gray'
+
+const styles = StyleSheet.create(
+  
+  {
   backgroundImage: {
     height: '100%',
     width: '100%',
@@ -14,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: "absolute",
     top: 0,
-    backgroundColor: "pink",
+    backgroundColor: background,
   },
   bottomNavBar: {
     flex: 1,
@@ -31,22 +56,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: "absolute",
     borderRadius: 13,
-    backgroundColor: "transparent",
-    borderColor: "black",
     borderWidth: 0,
-  },
-  cardExpanded: {
-    backgroundColor: "purple",
   },
   cardGradient: {
     height: "100%",
     width: "100%",
     borderRadius: 10,
     position: 'absolute',
-    zIndex: 1
+    zIndex: 2
+  },
+  cardClick: {
+    height: "100%",
+    width: "100%",
+    borderRadius: 10,
+    position: 'absolute',
+    zIndex: 10
   },
   cardTitle: {
-    color: '#ffffff',
+    color: onPrimary,
     fontSize: 24,
     position: 'absolute',
     bottom: '10%',
@@ -59,11 +86,16 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "lightblue",
+    backgroundColor: background,
   },
-  containerList: {
+    containerList: {
+      paddingTop: "30%",
+      paddingBottom: "30%",
     width: "100%",
+    minHeight: "100%",
     top: 0,
+    backgroundColor: background,
+    
   },
   delete: {
     width: "100%",
@@ -79,7 +111,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: "absolute",
     top: 0,
-    backgroundColor: "pink",
+    backgroundColor: background,
   },
   helperIconLeft: {
     position: "absolute",
@@ -88,7 +120,6 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
     width: 50,
     height: 50,
-    fill: 'pink',
     zIndex: 2
   },
   helperIconRight: {
@@ -104,12 +135,59 @@ const styles = StyleSheet.create({
     width: "90%",
     flexDirection:'row',
     alignSelf:'center',
-    backgroundColor: "gray",
+    backgroundColor: surface,
     marginTop: "1%",
     marginBottom: "1%",
     marginLeft: "2%",
     marginRight: "2%",
     borderRadius: 10,
+    borderWidth: 0,
+    borderColor: onSurface
+  },
+    modalContainer: {
+      top: "7.5%",
+      left: "7.5%",
+    width: "85%",
+    height: "85%",
+    position: "absolute",
+    borderRadius: 13,
+    borderWidth: 0,
+    backgroundColor: background
+  },
+  modalContent: {
+    top: "1.5%",
+      left: "2.5%",
+    width: "95%",
+    height: "97%",
+    position: "absolute",
+    borderRadius: 13,
+    borderWidth: 0,
+    backgroundColor: surface
+  },
+  modalClose: {
+    left: "91%",
+    top: "96%",
+    height: "10%",
+    aspectRatio: 1,
+    backgroundColor: secondary,
+    borderRadius: 50,
+    borderWidth: 5,
+    borderColor: secondaryVariant,
+    padding: '1%'
+  },
+  modalIcon: {
+    width: "90%",
+    height: "90%",
+    margin:"5%",
+  },
+  modalOpen: {
+    position:"absolute",
+    right: "5%",
+    bottom: "3%",
+    width: "12%",
+    aspectRatio: 1,
+    borderRadius: 50,
+    zIndex:2
   },
   logo: {
     aspectRatio: 1,
@@ -127,16 +205,18 @@ const styles = StyleSheet.create({
   },
   titleList: {
     flex: 1,
-    fontSize: 22,
+    fontSize: 18,
     textAlign: "center",
+    alignSelf: 'center',
     fontWeight: "bold",
+    color: onSecondary
   },
   votes: {
     position: "absolute",
-    right: '3%',
     textAlign: "center",
-    bottom: '3%',
-    margin: "1%",
+    alignSelf: "flex-end",
+    bottom: '5.5%',
+    left: '4.5%',
     zIndex: 2
   },
   button: {

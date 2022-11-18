@@ -12,7 +12,7 @@ import {Ionicons} from "@expo/vector-icons";
 import styles from "./styles";
 
 interface ObjectInterface {
-  item: ItemInterface;
+
 }
 
 interface ItemInterface {
@@ -30,12 +30,9 @@ const Item = (props: ObjectInterface) => {
         source={{
           uri: props.item.image,
         }}
-      />
+      ></Image>
       <Text style={styles.titleList}>{props.item.title}</Text>
-      <Text style={styles.votes}>
-        {" "}
-        {"⭐".repeat(Math.round(props.item.votes))}
-      </Text>
+      <Text style={styles.votes}>{"⭐".repeat(Math.round(props.item.votes))}</Text>
     </View>
   );
 };
@@ -49,7 +46,7 @@ export default function ListTemplate(list) {
         contentContainerStyle={styles.containerList}
         data={list.list}
         renderItem={renderItem}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item:object) => item.id}
         renderHiddenItem={() => (
           <View style={styles.delete}>
             <TouchableWithoutFeedback
