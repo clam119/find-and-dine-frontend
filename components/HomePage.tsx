@@ -5,12 +5,12 @@ import RestaurantCard from "./RestaurantCard";
 
 
 import styles from "./styles";
-import DEMO_CONTENT_I from "./ApiInterested";
+import { MockData} from "./MockData";
 
 export default function HomePage() {
   const [noMoreRestaurants, setNoMoreRestaurants] = useState(false);
   const [restaurantCardArray, setRestaurantCardArray] =
-    useState(DEMO_CONTENT_I);
+    useState(MockData);
   const [swipeDirection, setSwipeDirection] = useState("--");
   const [id, setId] = useState("");
   useEffect(() => {

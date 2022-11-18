@@ -1,20 +1,20 @@
 import { ADD_NOT_INTERESTED, RESET_NOT_INTERESTED } from "./action";
 import { ADD_INTERESTED, RESET_INTERESTED } from "./action";
 
-const notInterestedInitialState = {
+export const notInterestedInitialState = {
     restaurants: []
 }
 
-const interestedInitialState = {
+export const interestedInitialState = {
     restaurants: []
 }
 export const notInterestedReducer = (state = notInterestedInitialState, action) => {
     switch (action.type) {
         case ADD_NOT_INTERESTED: {
-            const { id, restaurant } = action.payload;
+            const { restaurant } = action.payload;
             return {
                 ...state,
-                restaurants: [...state.restaurants, { id, restaurant }]
+                restaurants: [...state.restaurants, restaurant ]
             };
         }
         case RESET_NOT_INTERESTED: {
@@ -29,10 +29,10 @@ export const notInterestedReducer = (state = notInterestedInitialState, action) 
 export const interestedReducer = (state = interestedInitialState, action) => {
     switch (action.type) {
         case ADD_INTERESTED: {
-            const { id, restaurant } = action.payload;
+            const { restaurant } = action.payload;
             return {
                 ...state,
-                restaurants: [...state.restaurants, { id, restaurant }]
+                restaurants: [...state.restaurants, restaurant ]
             };
         }
         case RESET_INTERESTED: {
