@@ -169,7 +169,6 @@ function RestaurantCard({
 				transparent={false}
 				visible={modalSeen}
 				onRequestClose={() => {
-					Alert.alert('Closed');
 					setModalSeen(!modalSeen);
 				}}>
 				<View style={styles.modalContainer}>
