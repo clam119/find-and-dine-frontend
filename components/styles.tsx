@@ -111,6 +111,31 @@ const styles = StyleSheet.create(
     alignItems: "center",
     top: 0,
   },
+  expandedInfo: {
+    backgroundColor: background,
+    margin: '1%',
+    position: 'absolute',
+    width: '48%',
+    height: '40%',
+
+  },
+  expandedGallery: {
+    backgroundColor: background,
+    margin: '1%',
+    position: 'absolute',
+    top: '41%',
+    width: '98%',
+    height: '58%',
+  },
+  expandedReviews: {
+    backgroundColor: background,
+    margin: '1%',
+    position: 'absolute',
+    width: '47%',
+    height: '40%',
+    left:'50%'
+
+  },
   header: {
     width: "100%",
     height: "10%",
@@ -179,12 +204,14 @@ const styles = StyleSheet.create(
     borderRadius: 50,
     borderWidth: 5,
     borderColor: secondaryVariant,
-    padding: '1%'
+    padding: '1%',
+    position: 'absolute'
   },
   modalIcon: {
     width: "90%",
     height: "90%",
     margin:"5%",
+    
   },
   modalOpen: {
     position:"absolute",
