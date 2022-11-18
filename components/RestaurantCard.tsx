@@ -9,7 +9,6 @@ import {
 	Dimensions,
 	ImageBackground,
 	Image,
-	Modal,
 	TouchableWithoutFeedback,
 	Pressable,
 	View,
@@ -17,6 +16,7 @@ import {
 import styles from './styles';
 
 import { LinearGradient } from 'expo-linear-gradient';
+import { ExtendedCard } from './ExtendedCard';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -35,7 +35,7 @@ function RestaurantCard({
 		image: String;
 		review: Number;
 	}
-  	const [modalSeen, setModalSeen] = useState(false);
+	const [modalSeen, setModalSeen] = useState(false);
 	const [ interested, setInterested] = useState({});
 	const [ notInterested, setNotInterested ] = useState({});
 
@@ -163,29 +163,9 @@ function RestaurantCard({
 	});
 
 	return (
+		
 		<>
-			<Modal
-				animationType="slide"
-				transparent={false}
-				visible={modalSeen}
-				onRequestClose={() => {
-					setModalSeen(!modalSeen);
-				}}>
-				<View style={styles.modalContainer}>
-					<View style={styles.modalContent}>
-					<Pressable
-						style={styles.modalClose}
-						onPress={() => setModalSeen(!modalSeen)}>
-						<Image
-							style={styles.modalIcon}
-							source={require('../assets/contract-card.png')}
-							resizeMode="cover"
-						/>
-					</Pressable>
-					</View>
-					
-				</View>
-			</Modal>
+		<ExtendedCard props={{modalSeen, setModalSeen}}/>
 			<Animated.View
 				{...animation.panHandlers}
 				style={[
