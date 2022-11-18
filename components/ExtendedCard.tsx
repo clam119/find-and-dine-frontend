@@ -11,9 +11,6 @@ import {
 	View,
 } from 'react-native';
 import styles from './styles';
-import { ImageGallery } from './subComponents/ImageGallery';
-import { RestaurantInfo } from './subComponents/RestaurantInfo';
-import { ReviewsSummary } from './subComponents/ReviewsSummary';
 
 
 export const ExtendedCard = ({props}:any) =>{
@@ -31,9 +28,6 @@ return(
 				}}>
 				<View style={styles.modalContainer}>
 					<View style={styles.modalContent}>
-						<RestaurantInfo/>
-						<ReviewsSummary/>
-						<ImageGallery/>
 					<Pressable
 						style={styles.modalClose}
 						onPress={() => setModalSeen(!modalSeen)}>
