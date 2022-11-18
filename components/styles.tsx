@@ -19,10 +19,14 @@ export const secondaryVariant = 'darkgray'
 export const onPrimary = 'white'
 export const onSecondary = 'gray'
 export const onSurface = 'transparent'
-export const onBackground = 'yellow'
+export const onBackground = 'white'
+export const onError = "#DC143C"
+export const onSuccess ="#50C878"
 
 export const surface = 'lightgray'
 export const background = 'gray'
+
+
 
 const styles = StyleSheet.create(
   
@@ -47,7 +51,9 @@ const styles = StyleSheet.create(
     alignItems: 'center',
   },
   binIcon: {
-    right: "26%"
+    padding: 30,
+    right: "16%",
+    backgroundColor: onError,
   },
   card: {
     width: "85%",
@@ -197,7 +203,9 @@ const styles = StyleSheet.create(
     margin: "0%",
   },
   refreshIcon:{
-    left: "27%",
+    padding: 30,
+    left: "16%",
+    backgroundColor: onSuccess
   },
   title: {
     top: 20,
