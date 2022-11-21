@@ -179,6 +179,25 @@ const styles = StyleSheet.create({
 		borderWidth: 0,
 		borderColor: onSurface,
 	},
+	loading: {
+		alignSelf: 'center',
+		resizeMode: 'contain',
+		width: '80%'
+	},
+	loadingContainer: {
+		justifyContent: 'center',
+		width: '100%',
+		height: '100%',
+		backgroundColor: background
+	},
+	loadingText: {
+		position: 'absolute',
+		top: '75%',
+		alignSelf: 'center',
+		fontSize: 36,
+		color: onBackground,
+		fontWeight: 'bold'
+	},
 	modalContainer: {
 		top: '7.5%',
 		left: '7.5%',
