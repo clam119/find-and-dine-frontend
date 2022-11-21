@@ -6,12 +6,14 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux';
 import { Text } from "react-native";
 import LoadingPage from "./components/LoadingPage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function App() {
-  return (
-    <>
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {setTimeout(()=>setLoading(false),2000)}, [])
+  return (<>
+    {loading ? <LoadingPage/> : <>
     <Provider store={store}>
         <PersistGate loading={<LoadingPage/>} persistor={persistor}>
           <HomePage/>
@@ -20,6 +22,7 @@ export default function App() {
           </NavigationContainer>
         </PersistGate>
       </Provider>    
+    </>}
     </>
   );
 }
