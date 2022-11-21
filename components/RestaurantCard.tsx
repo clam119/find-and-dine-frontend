@@ -165,7 +165,7 @@ function RestaurantCard({
 	return (
 		
 		<>
-		<ExtendedCard props={{modalSeen, setModalSeen}}/>
+		<ExtendedCard props={{modalSeen, setModalSeen, item}}/>
 			<Animated.View
 				{...animation.panHandlers}
 				style={[

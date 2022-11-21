@@ -21,9 +21,12 @@ export const ExtendedCard = ({props}:any) =>{
 let modalSeen = props.modalSeen
 let setModalSeen = props.setModalSeen
 	
-if (props.selectedItem) { console.log(props.selectedItem)}//ITEM DATA FROM LIST
+/*
+const data  = props.selectedItem ? props.selectedItem : props.item
+*/
 	
-const DEMO_DATA = {
+const data =	
+{
 	"title": "My Thai Restaurant",
 	"categoryName": "Thai restaurant",
 	"categories": ["Thai restaurant"],
@@ -43,16 +46,22 @@ const DEMO_DATA = {
 	"reviewsDistribution": {"oneStar": 79,"twoStar": 37,"threeStar": 71,"fourStar": 221,"fiveStar": 533},
 	"url": "https://www.google.com/maps/place/My+Thai+Restaurant/@53.4804333,-2.2457361,17z/data=!3m1!4b1!4m5!3m4!1s0x487bb1c22cda3b1f:0xdd42abc354efb450!8m2!3d53.4803866!4d-2.2457668?hl=en",
 	"website": "http://mythairestaurant.co.uk/manchester-john-dalton-street"
-  }
+}
 	
-	
-
+  const info: Object = {
+    title: data.title,
+    categoryName: data.categoryName,
+    categories: data.categories,
+    address: data.address,
+    city: data.city,
+	  postalCode: data.postalCode,
+    }
 const reviews: Object = {
-    reviewsCount: DEMO_DATA.reviewsCount,
-	reviewsDistribution: DEMO_DATA.reviewsDistribution,
+    reviewsCount: data.reviewsCount,
+	reviewsDistribution: data.reviewsDistribution,
   }	
-const link: string = DEMO_DATA.website? DEMO_DATA.website : ''
-const nav: string = DEMO_DATA.url? DEMO_DATA.url : ''
+const link: string = data.website? data.website : ''
+const nav: string = data.url? data.url : ''
 	
 return(
 <Modal
@@ -64,7 +73,7 @@ return(
 				}}>
 				<View style={styles.modalContainer}>
 					<View style={styles.modalContent}>
-						<RestaurantInfo/>
+				<RestaurantInfo info={info}/>
 				<ReviewsSummary reviews={reviews} />
 						<ImageGallery/>
 					<Pressable
