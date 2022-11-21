@@ -20,6 +20,16 @@ export const ExtendedCard = ({props}:any) =>{
 let modalSeen = props.modalSeen
 let setModalSeen = props.setModalSeen
 
+	
+const reviews = {
+    "reviewsCount": 941,
+      "reviewsDistribution": {
+        "oneStar": 79,
+        "twoStar": 37,
+        "threeStar": 71,
+        "fourStar": 221,
+        "fiveStar": 533}
+  }	
 
 return(
 <Modal
@@ -32,7 +42,7 @@ return(
 				<View style={styles.modalContainer}>
 					<View style={styles.modalContent}>
 						<RestaurantInfo/>
-						<ReviewsSummary/>
+				<ReviewsSummary reviews={reviews} />
 						<ImageGallery/>
 					<Pressable
 						style={styles.modalClose}
