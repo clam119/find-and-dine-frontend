@@ -21,7 +21,7 @@ export function ReviewsSummary(props: { reviews: any }) {
         <View style={{ width: '100%', height: '50%', flexDirection: 'column', flexWrap: 'nowrap', justifyContent: 'space-around', padding: '10%' }}>
           {[[5,reviewObj.reviewsDistribution.fiveStar],[4,reviewObj.reviewsDistribution.fourStar],[3,reviewObj.reviewsDistribution.threeStar],[2,reviewObj.reviewsDistribution.twoStar],[1,reviewObj.reviewsDistribution.oneStar]].map((Num, i) => {
             return <View key={i} style={{ height: '20%', width: '100%', flexDirection: 'row', justifyContent: 'space-around', }}>
-              <View style={{ backgroundColor: primary, alignSelf: 'center', height: '33%', width: `${Num[1]? ((Num[1]/reviewObj.reviewsCount)*100)*1.2: 0}%`, borderRadius: 12 ,position:'absolute', zIndex: 1}}></View>
+              <View style={{ backgroundColor: primary, alignSelf: 'center', height: '33%', width: `${Num[1]? ((Num[1]/reviewObj.reviewsCount)*100)*1.2: 0}%`, borderRadius: 12 ,position:'absolute', zIndex: 1}}/>
             <View style={{ backgroundColor: onBackground, alignSelf:'center', height: '33%', width: '80%', borderRadius: 12 }}></View>
               <Text style={{ fontSize: 15, fontWeight: 'bold', color: primary}}>{Num[0]}</Text>
           </View>

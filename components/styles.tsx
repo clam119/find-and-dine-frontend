@@ -129,14 +129,11 @@ const styles = StyleSheet.create(
     borderRadius: 10,
   },
   expandedReviews: {
-    backgroundColor: background,
     margin: '1%',
     position: 'absolute',
     width: '47%',
     height: '40%',
     left: '50%',
-    borderRadius: 10,
-
   },
   header: {
     width: "100%",

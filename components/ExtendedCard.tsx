@@ -54,7 +54,6 @@ return(
 						/>
 					</Pressable>
 					</View>
-					
 				</View>
 			</Modal>
 )
