@@ -162,6 +162,18 @@ const styles = StyleSheet.create(
     height: 50,
     zIndex: 2
   },
+  image: {
+    width: 100,
+    height: 250,
+    resizeMode: 'cover',
+    marginVertical: 20,
+  },
+  footer: {
+
+  },
+  footerText: {
+
+  },
   item: {
     width: "90%",
     flexDirection:'row',
