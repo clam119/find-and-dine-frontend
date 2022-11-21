@@ -63,6 +63,10 @@ const reviews: Object = {
 const link: string = data.website? data.website : ''
 const nav: string = data.url? data.url : ''
 	
+const images: Object = {
+	images: data.imageUrls
+}
+
 return(
 <Modal
 				animationType="slide"
@@ -75,7 +79,7 @@ return(
 					<View style={styles.modalContent}>
 				<RestaurantInfo info={info}/>
 				<ReviewsSummary reviews={reviews} />
-						<ImageGallery/>
+						<ImageGallery images={images}/>
 					<Pressable
 						style={styles.modalClose}
 						onPress={() => setModalSeen(!modalSeen)}>
