@@ -5,13 +5,16 @@ import { store, persistor} from './components/redux/store';
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux';
 import { Text } from "react-native";
+import LoadingPage from "./components/LoadingPage";
+import { useState } from "react";
+
 
 export default function App() {
   return (
     <>
-      <Provider store={store}>
-        <PersistGate loading={<Text>Loading...</Text>} persistor={persistor}>
-          <HomePage />
+    <Provider store={store}>
+        <PersistGate loading={<LoadingPage/>} persistor={persistor}>
+          <HomePage/>
           <NavigationContainer>
           <BottomNavBar/>
           </NavigationContainer>
