@@ -244,6 +244,18 @@ const styles = StyleSheet.create({
 		aspectRatio: 1,
 		borderRadius: 50,
 		zIndex: 2,
+  },
+  modalNav: {
+		right: '40%',
+		top: '96%',
+		height: '10%',
+		aspectRatio: 1,
+		backgroundColor: secondary,
+		borderRadius: 50,
+		borderWidth: 5,
+		borderColor: secondaryVariant,
+		padding: '1%',
+		position: 'absolute',
 	},
 	logo: {
 		aspectRatio: 1,
