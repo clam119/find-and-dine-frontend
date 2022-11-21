@@ -18,7 +18,7 @@ interface ObjectInterface {
 }
 
 
-const Item = (props: { item: { image: any; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; votes: number; }; setModalSeen: (arg0: boolean) => void; }) => {
+const Item = (props: { item: { image: any; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; votes: number; }; setModalSeen: (arg0: boolean) => void; setSelectedItem: any; }) => {
   
   return (
     <View style={styles.item}>
@@ -32,7 +32,8 @@ const Item = (props: { item: { image: any; title: string | number | boolean | Re
       <Text style={styles.votes}>{"⭐".repeat(Math.round(props.item.votes))}</Text>
       <TouchableWithoutFeedback
               onPress={() => {
-                props.setModalSeen(true);
+          props.setModalSeen(true);
+          props.setSelectedItem(props.item)
               }}>
       <Image
 						style={styles.modalListIcon}
@@ -47,11 +48,12 @@ const Item = (props: { item: { image: any; title: string | number | boolean | Re
 };
 
 export default function ListTemplate(list: { list: any | readonly object[] | null | undefined; }) {
-  const renderItem = ({ item }: any) => <Item item={item} setModalSeen={setModalSeen} />;
+  const renderItem = ({ item }: any) => <Item item={item} setModalSeen={setModalSeen} setSelectedItem={setSelectedItem} />;
   const [modalSeen, setModalSeen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState({});
   return (
     <SafeAreaView>
-      <ExtendedCard props={{modalSeen, setModalSeen}}/>
+      <ExtendedCard props={{modalSeen, setModalSeen, selectedItem}}/>
       <SwipeListView
         contentContainerStyle={styles.containerList}
         data={list.list}

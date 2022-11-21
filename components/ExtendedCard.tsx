@@ -20,7 +20,8 @@ import { ReviewsSummary } from './subComponents/ReviewsSummary';
 export const ExtendedCard = ({props}:any) =>{
 let modalSeen = props.modalSeen
 let setModalSeen = props.setModalSeen
-
+	
+if (props.selectedItem) { console.log(props.selectedItem)}//ITEM DATA FROM LIST
 	
 const reviews: Object = {
     "reviewsCount": 941,
