@@ -68,6 +68,7 @@ const images: Object = {
 }
 
 return(
+	
 <Modal
 				animationType="slide"
 				transparent={false}
@@ -77,6 +78,8 @@ return(
 				}}>
 				<View style={styles.modalContainer}>
 					<View style={styles.modalContent}>
+						<Text style={styles.expendedCardTitle}
+						numberOfLines={1}>{data.title}</Text>
 				<RestaurantInfo info={info}/>
 				<ReviewsSummary reviews={reviews} />
 						<ImageGallery images={images}/>

@@ -1,7 +1,6 @@
 /** @format */
 
 import { StyleSheet } from 'react-native';
-
 /*
 import { Appearance, useColorScheme } from 'react-native';
 const theme = () => {
@@ -117,6 +116,13 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-evenly',
 		padding: '5%',
 	},
+	expendedCardTitle:{
+		alignSelf: "center",
+		top: -40,
+		fontSize: 23,
+		fontFamily: "Optima-Bold",
+
+	},
 	expandedGallery: {
 		backgroundColor: background,
 		margin: '1%',
@@ -161,7 +167,7 @@ const styles = StyleSheet.create({
 	},
 	imageGallery: {
 		width: '100%',
-		height: 330,
+		height: 395,
     resizeMode: 'cover',
 	borderRadius: 10,
 
@@ -180,10 +186,10 @@ const styles = StyleSheet.create({
 		borderColor: onSurface,
 	},
 	modalContainer: {
-		top: '7.5%',
+		top: '10%',
 		left: '7.5%',
 		width: '85%',
-		height: '85%',
+		height: '82.5%',
 		position: 'absolute',
 		borderRadius: 13,
 		borderWidth: 0,
