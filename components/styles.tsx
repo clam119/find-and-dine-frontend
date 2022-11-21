@@ -109,12 +109,13 @@ const styles = StyleSheet.create({
 		top: 0,
 	},
 	expandedInfo: {
-		backgroundColor: background,
 		margin: '1%',
 		position: 'absolute',
 		width: '48%',
-		height: '40%',
-		borderRadius: 10,
+		height: '38%',
+    borderRadius: 10,
+    justifyContent: 'space-evenly',
+    padding: '5%',
 	},
 	expandedGallery: {
 		backgroundColor: background,
@@ -246,8 +247,8 @@ const styles = StyleSheet.create({
 		zIndex: 2,
   },
   modalNav: {
-		right: '40%',
-		top: '96%',
+		right: '65%',
+		top: '36.5%',
 		height: '10%',
 		aspectRatio: 1,
 		backgroundColor: secondary,
@@ -255,7 +256,8 @@ const styles = StyleSheet.create({
 		borderWidth: 5,
 		borderColor: secondaryVariant,
 		padding: '1%',
-		position: 'absolute',
+    position: 'absolute',
+    zIndex:2
 	},
 	logo: {
 		aspectRatio: 1,

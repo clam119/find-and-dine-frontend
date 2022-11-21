@@ -1,4 +1,5 @@
-import { Text, View} from "react-native";
+import { Text, View } from "react-native";
+import { primary } from "../styles"
 import styles from "../styles";
 
 export function RestaurantInfo() {
@@ -12,13 +13,14 @@ export function RestaurantInfo() {
     "postalCode": "M2 6WH",
     }
 
+  const categories = DEMO_DATA.categories.filter((cat) => cat !== DEMO_DATA.categoryName)
     return (
-        <View style={styles.expandedInfo}>
-        <Text>{DEMO_DATA.categoryName}</Text>
-        <Text>{DEMO_DATA.categories.filter((cat) => cat !== DEMO_DATA.categoryName)}</Text>
-        <Text>{DEMO_DATA.address.slice(0, DEMO_DATA.address.indexOf(','))}</Text>
-        <Text>{DEMO_DATA.city}</Text>
-        <Text>{DEMO_DATA.postalCode}</Text>
+      <View style={styles.expandedInfo}>
+        <Text style={{ textAlign: "center", alignSelf: 'center', fontSize: 15, fontWeight: 'bold', color:primary}}>{DEMO_DATA.categoryName}</Text>
+        {categories.length? <Text style={{ textAlign: "center", alignSelf: 'center', fontSize: 15 , color:primary}}>{ }</Text> : <></>}
+        <Text style={{ textAlign: "center", alignSelf: 'center', fontSize: 15 , color:primary}}>{DEMO_DATA.address.slice(0, DEMO_DATA.address.indexOf(','))}</Text>
+        <Text style={{ textAlign: "center", alignSelf: 'center', fontSize: 15 , color:primary}}>{DEMO_DATA.city}</Text>
+        <Text style={{ textAlign: "center", alignSelf: 'center', fontSize: 15 , color:primary}}>{DEMO_DATA.postalCode}</Text>
         </View>
     )
 }
