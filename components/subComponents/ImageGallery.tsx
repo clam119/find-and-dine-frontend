@@ -2,35 +2,25 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
   View,
-  Text,
   FlatList,
   TouchableOpacity,
-  StyleSheet,
   Image,
-  Dimensions,
   
 
 } from "react-native";
 
 import styles from "../styles";
-const images = require("../../assets/images.json");
 
 
-interface images {
-  id: number;
-  url: string;
-}
+export function ImageGallery(props: { images: any }) {
+  
+const images = props.images.images;
 
-export function ImageGallery() {
-
-  const renderItems: React.FC<{item: images}> = ({item}) => {
-    console.log(item)
+  const renderItems: React.FC<{item: string}> = ({item}) => {
     return <TouchableOpacity 
     onPress={() => console.log('pressed')}
     >
-      <Image source={{uri: item.url}} style={styles.image} />
-      <View style={styles.footer} ></View>
-      <Text style={styles.footerText}>{images.id}</Text>
+      <Image source={{uri: item}} style={styles.imageGallery} />
     </TouchableOpacity>
   }
 
@@ -41,6 +31,10 @@ export function ImageGallery() {
         data={images}
         renderItem={renderItems}
         keyExtractor={(item, index) => index.toString()}
+        snapToAlignment='start'
+        decelerationRate={'fast'}
+        snapToInterval={300}
+        
       />
     </View>
   );

@@ -159,6 +159,12 @@ const styles = StyleSheet.create({
 		height: 50,
 		zIndex: 2,
 	},
+	imageGallery: {
+		width: '100%',
+		height: 300,
+    resizeMode: 'cover',
+	borderRadius: 10,
+	},
 	item: {
 		width: '90%',
 		flexDirection: 'row',
