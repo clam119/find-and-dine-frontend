@@ -113,9 +113,9 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		width: '48%',
 		height: '38%',
-    borderRadius: 10,
-    justifyContent: 'space-evenly',
-    padding: '5%',
+		borderRadius: 10,
+		justifyContent: 'space-evenly',
+		padding: '5%',
 	},
 	expandedGallery: {
 		backgroundColor: background,
@@ -245,8 +245,8 @@ const styles = StyleSheet.create({
 		aspectRatio: 1,
 		borderRadius: 50,
 		zIndex: 2,
-  },
-  modalNav: {
+	},
+	modalNav: {
 		right: '65%',
 		top: '36.5%',
 		height: '10%',
@@ -256,8 +256,8 @@ const styles = StyleSheet.create({
 		borderWidth: 5,
 		borderColor: secondaryVariant,
 		padding: '1%',
-    position: 'absolute',
-    zIndex:2
+		position: 'absolute',
+		zIndex: 2,
 	},
 	logo: {
 		aspectRatio: 1,

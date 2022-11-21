@@ -1,7 +1,14 @@
+/** @format */
+
 import React, { useContext, useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { store } from './redux/store';
-import { addNotInterested, addInterested, resetNotInterested, resetInterested } from "./redux/action";
+import {
+	addNotInterested,
+	addInterested,
+	resetNotInterested,
+	resetInterested,
+} from './redux/action';
 import {
 	Text,
 	Animated,
@@ -28,7 +35,7 @@ function RestaurantCard({
 	item: any;
 	removeCard: Function;
 	swipedDirection: Function;
-  }) {
+}) {
 	interface Restaurant {
 		id: String;
 		title: String;
@@ -36,27 +43,27 @@ function RestaurantCard({
 		review: Number;
 	}
 	const [modalSeen, setModalSeen] = useState(false);
-	const [ interested, setInterested] = useState({});
-	const [ notInterested, setNotInterested ] = useState({});
+	const [interested, setInterested] = useState({});
+	const [notInterested, setNotInterested] = useState({});
 
 	const dispatch = useDispatch();
-	
+
 	const handleAddNotInterested = (item: Restaurant) => {
 		dispatch(addNotInterested(item));
-		const storeStates = (store.getState());
-		const notInterestedState = storeStates.notInterested
-		console.log(notInterestedState)
+		const storeStates = store.getState();
+		const notInterestedState = storeStates.notInterested;
+		console.log(notInterestedState);
 		// console.log(notInterestedState.restaurants.length,'<< not interested array length')
 		setNotInterested({});
-	}
+	};
 
 	const handleAddInterested = (item: Restaurant) => {
 		dispatch(addInterested(item));
-		const storeStates = (store.getState());
+		const storeStates = store.getState();
 		const interestedState = storeStates.interested;
 		// console.log(interestedState.restaurants.length,'<< interested array length')
 		setInterested({});
-	}
+	};
 
 	const [x, _] = useState(new Animated.Value(0));
 	let swipeDirection: string = '';
@@ -124,37 +131,37 @@ function RestaurantCard({
 				}).start();
 			} else if (gestureState.dx > SCREEN_WIDTH - 300) {
 				// Right Swipe - Interested
-                Animated.parallel([
-                    Animated.timing(x, {
-                        toValue: SCREEN_WIDTH,
-                        duration: 500,
-                        useNativeDriver: false,
-                    }),
-                    Animated.timing(cardOpacity, {
-                        toValue: 0,
-                        duration: 500,
-                        useNativeDriver: false,
-                    }),
-                ]).start(() => {
-                    swipedDirection(swipeDirection);
+				Animated.parallel([
+					Animated.timing(x, {
+						toValue: SCREEN_WIDTH,
+						duration: 500,
+						useNativeDriver: false,
+					}),
+					Animated.timing(cardOpacity, {
+						toValue: 0,
+						duration: 500,
+						useNativeDriver: false,
+					}),
+				]).start(() => {
+					swipedDirection(swipeDirection);
 					handleAddInterested(item);
 					removeCard();
-                });
-            } else if (gestureState.dx < -SCREEN_WIDTH + 300) {
+				});
+			} else if (gestureState.dx < -SCREEN_WIDTH + 300) {
 				// Left Swipe - Not Interested
-                Animated.parallel([
-                    Animated.timing(x, {
-                        toValue: -SCREEN_WIDTH,
-                        duration: 500,
-                        useNativeDriver: false,
-                    }),
-                    Animated.timing(cardOpacity, {
-                        toValue: 0,
-                        duration: 500,
-                        useNativeDriver: false,
-                    }),
-                ]).start(() => {
-                    swipedDirection(swipeDirection);
+				Animated.parallel([
+					Animated.timing(x, {
+						toValue: -SCREEN_WIDTH,
+						duration: 500,
+						useNativeDriver: false,
+					}),
+					Animated.timing(cardOpacity, {
+						toValue: 0,
+						duration: 500,
+						useNativeDriver: false,
+					}),
+				]).start(() => {
+					swipedDirection(swipeDirection);
 					handleAddNotInterested(item);
 					removeCard();
 				});
@@ -163,19 +170,25 @@ function RestaurantCard({
 	});
 
 	return (
-		
 		<>
-		<ExtendedCard props={{modalSeen, setModalSeen, item}}/>
+			<ExtendedCard props={{ modalSeen, setModalSeen, item }} />
 			<Animated.View
 				{...animation.panHandlers}
 				style={[
 					styles.card,
 					{
 						opacity: cardOpacity,
-						transform: [{ translateX: x }, { rotate: rotateCard }],
+						transform: [
+							{ translateX: x },
+							{ rotate: rotateCard },
+						],
 					},
 				]}>
-				<LinearGradient colors={['#00000000', '#111111']} style={styles.cardGradient} start={[0.5, 0.7]} />
+				<LinearGradient
+					colors={['#00000000', '#111111']}
+					style={styles.cardGradient}
+					start={[0.5, 0.7]}
+				/>
 				<TouchableWithoutFeedback
 					style={styles.backgroundImage}
 					onPress={() => {
@@ -190,7 +203,7 @@ function RestaurantCard({
 
 				<Image
 					source={{ uri: item.image }}
-					resizeMode="cover"
+					resizeMode='cover'
 					style={[styles.backgroundImage]}
 				/>
 				<Text style={styles.cardTitle}>{item.title}</Text>
@@ -237,7 +250,7 @@ function RestaurantCard({
 					<Image
 						style={styles.modalIcon}
 						source={require('../assets/expand-card.png')}
-						resizeMode="cover"
+						resizeMode='cover'
 					/>
 				</Animated.View>
 			</Animated.View>
@@ -246,4 +259,3 @@ function RestaurantCard({
 }
 
 export default RestaurantCard;
-
