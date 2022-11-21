@@ -9,6 +9,7 @@ import {
 	TouchableWithoutFeedback,
 	Pressable,
 	View,
+	Linking
 } from 'react-native';
 import styles from './styles';
 import { ImageGallery } from './subComponents/ImageGallery';
@@ -21,7 +22,7 @@ let modalSeen = props.modalSeen
 let setModalSeen = props.setModalSeen
 
 	
-const reviews = {
+const reviews: Object = {
     "reviewsCount": 941,
       "reviewsDistribution": {
         "oneStar": 79,
@@ -30,7 +31,9 @@ const reviews = {
         "fourStar": 221,
         "fiveStar": 533}
   }	
-
+const link: string = 'https://northcoders.com/'
+	
+	
 return(
 <Modal
 				animationType="slide"
@@ -52,7 +55,17 @@ return(
 							source={require('../assets/contract-card.png')}
 							resizeMode="cover"
 						/>
-					</Pressable>
+				</Pressable>
+				{link? <Pressable
+						style={styles.modalLink}
+						onPress={() => Linking.openURL(link)}>
+						<Image
+							style={styles.modalIcon}
+							source={require('../assets/globe.png')}
+							resizeMode="cover"
+						/>
+				</Pressable>:null}
+				
 					</View>
 				</View>
 			</Modal>

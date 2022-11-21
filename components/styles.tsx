@@ -211,7 +211,19 @@ const styles = StyleSheet.create(
     height: "90%",
     margin:"5%",
     
-  },
+    },
+    modalLink: {
+      right: "91%",
+      top: "96%",
+      height: "10%",
+      aspectRatio: 1,
+      backgroundColor: secondary,
+      borderRadius: 50,
+      borderWidth: 5,
+      borderColor: secondaryVariant,
+      padding: '1%',
+      position: 'absolute'
+    },
   modalOpen: {
     position:"absolute",
     right: "5%",
