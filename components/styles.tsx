@@ -161,9 +161,10 @@ const styles = StyleSheet.create({
 	},
 	imageGallery: {
 		width: '100%',
-		height: 300,
+		height: 330,
     resizeMode: 'cover',
 	borderRadius: 10,
+
 	},
 	item: {
 		width: '90%',

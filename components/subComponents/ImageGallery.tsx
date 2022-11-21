@@ -33,7 +33,7 @@ const images = props.images.images;
         keyExtractor={(item, index) => index.toString()}
         snapToAlignment='start'
         decelerationRate={'fast'}
-        snapToInterval={300}
+        snapToInterval={330}
         
       />
     </View>
