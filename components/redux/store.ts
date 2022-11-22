@@ -1,5 +1,5 @@
-import { legacy_createStore as createStore, combineReducers } from 'redux'
-import { interestedReducer, notInterestedReducer } from './reducer'
+import { legacy_createStore as createStore, combineReducers, applyMiddleware } from 'redux'
+import { interestedReducer, notInterestedReducer, mainReducer, favouriteReducer } from './reducer'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' 
@@ -10,7 +10,7 @@ const persistConfig = {
 }
 
 //Combines the interestedReducer and notInterestedReducer into a single Reducer
-const rootReducer = combineReducers({interested: interestedReducer, notInterested: notInterestedReducer})
+const rootReducer = combineReducers({interested: interestedReducer, notInterested: notInterestedReducer, main: mainReducer, favourited: favouriteReducer})
 //Creates a persisted reducer using the config and above combined reducer
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 

@@ -52,8 +52,6 @@ function RestaurantCard({
 		dispatch(addNotInterested(item));
 		const storeStates = store.getState();
 		const notInterestedState = storeStates.notInterested;
-		console.log(notInterestedState);
-		// console.log(notInterestedState.restaurants.length,'<< not interested array length')
 		setNotInterested({});
 	};
 
@@ -61,7 +59,6 @@ function RestaurantCard({
 		dispatch(addInterested(item));
 		const storeStates = store.getState();
 		const interestedState = storeStates.interested;
-		// console.log(interestedState.restaurants.length,'<< interested array length')
 		setInterested({});
 	};
 
