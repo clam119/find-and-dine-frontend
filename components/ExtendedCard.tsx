@@ -78,7 +78,7 @@ return(
 				}}>
 				<View style={styles.modalContainer}>
 					<View style={styles.modalContent}>
-						<Text style={styles.expendedCardTitle}
+						<Text style={styles.expandedCardTitle}
 						numberOfLines={1}>{data.title}</Text>
 				<RestaurantInfo info={info}/>
 				<ReviewsSummary reviews={reviews} />
@@ -95,7 +95,7 @@ return(
 				{nav? <Pressable
 						style={styles.modalNav}
 						onPress={() => Linking.openURL(nav)}>
-						<Ionicons name="location-outline" size={26} color="red" />
+						<Ionicons name="location-outline" size={26} color="#3668FF" />
 						<Text style={styles.locationIconText}>Location</Text>
 				</Pressable>:null}
 
