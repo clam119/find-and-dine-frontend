@@ -120,7 +120,6 @@ const styles = StyleSheet.create({
 		alignSelf: "center",
 		top: -40,
 		fontSize: 23,
-		fontFamily: "Optima-Bold",
 
 	},
 	expandedGallery: {

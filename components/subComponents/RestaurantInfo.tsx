@@ -15,7 +15,6 @@ export function RestaurantInfo(props: { info: any }) {
 					top: -20,
 					fontSize: 21,
 					color: primary,
-					fontFamily: "Optima",
 					marginBottom: 20,
 
 				}}>
