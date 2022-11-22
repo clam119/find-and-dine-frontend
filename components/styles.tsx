@@ -108,6 +108,8 @@ const styles = StyleSheet.create({
 		top: 0,
 	},
 	expandedInfo: {
+		top: '-2%',
+		left: '3%',
 		marginTop: '4%',
 		position: 'absolute',
 		width: '48%',
@@ -115,6 +117,7 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 		justifyContent: 'space-evenly',
 		padding: '0%',
+
 	},
 	expendedCardTitle:{
 		alignSelf: "center",
@@ -280,22 +283,26 @@ const styles = StyleSheet.create({
 		zIndex: 2,
 	},
 	modalNav: {
-		left: '1.5%',
+		width: 70,
+		left: '1.6%',
 		top: '35%',
 		right: '93%',
-		top: '36.5%',
 		height: '10%',
 		aspectRatio: 1,
 		position: 'absolute',
 		zIndex: 2,
 	},
 	modalFav: {
-		right: '40%',
-		top: '36.5%',
+		right: '85%',
+		bottom: '-5%',
 		height: '10%',
 		aspectRatio: 1,
 		position: 'absolute',
 		zIndex: 2,
+		backgroundColor: secondary,
+		borderRadius: 50,
+		borderWidth: 3,
+		borderColor: secondaryVariant,
 	},
 	locationIconText:{
 		position: 'absolute',

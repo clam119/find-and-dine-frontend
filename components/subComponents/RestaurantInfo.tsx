@@ -12,11 +12,12 @@ export function RestaurantInfo(props: { info: any }) {
 		<View style={styles.expandedInfo}>
 			<Text
 				style={{
-					top: -20,
+					top: -30,
 					fontSize: 18,
 					color: primary,
 					textAlign: 'center',
 					alignSelf: 'center',
+					left: '-11%'
 				}}>
 				{info.categoryName}
 			</Text>
@@ -42,6 +43,7 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
+					top: -10
 				}}>
 				{info.city}
 			</Text>
@@ -49,7 +51,8 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
-					marginBottom: '5%'
+					marginBottom: '5%',
+					top: -30
 				}}>
 				{info.postalCode}
 			</Text>
