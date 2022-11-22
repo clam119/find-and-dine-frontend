@@ -6,7 +6,7 @@ import { background } from '../styles';
 import { onBackground, primary } from '../styles';
 export function ReviewsSummary(props: { reviews: any }) {
 	const reviewObj = props.reviews;
-
+console.log(reviewObj.reviewsDistribution.fiveStar)
 	const votes =
 		Math.round(
 			(10 *
@@ -90,7 +90,7 @@ export function ReviewsSummary(props: { reviews: any }) {
 											? (Num[1] /
 													reviewObj.reviewsCount) *
 											  100 *
-											  1.2
+											  0.8
 											: 0
 									}%`,
 									borderRadius: 12,
