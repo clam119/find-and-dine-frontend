@@ -36,12 +36,37 @@ function RestaurantCard({
 	removeCard: Function;
 	swipedDirection: Function;
 }) {
+
+	interface Location {
+		lat: Number;
+		lng: Number;
+	}
+
+	interface ReviewsDistribution {
+		oneStar: Number;
+		twoStar: Number;
+		threeStar: Number;
+		fourStar: Number;
+		fiveStar: Number;
+	}
+
 	interface Restaurant {
 		id: String;
 		title: String;
-		image: String;
-		review: Number;
+		imageUrls: String[]
+		reviewsCount: Number
+		address: String
+		categories: String[]
+		categoryName: String;
+		city: String;
+		location: Location;
+		placeId: String;
+		postalCode: String;
+		reviewsDistribution: ReviewsDistribution
+		url: String;
+		website: String;
 	}
+
 	const [modalSeen, setModalSeen] = useState(false);
 	const [interested, setInterested] = useState({});
 	const [notInterested, setNotInterested] = useState({});
@@ -199,7 +224,7 @@ function RestaurantCard({
 				</TouchableWithoutFeedback>
 
 				<Image
-					source={{ uri: item.image }}
+					source={{ uri: item.imageUrls[0] }}
 					resizeMode='cover'
 					style={[styles.backgroundImage]}
 				/>

@@ -29,14 +29,6 @@ export const favouriteReducer = (state = favouriteInitialState, action) => {
             }
         }
 
-        case REMOVE_FAVOURITE: {
-            const { restaurant } = action.payload;
-            const filteredRestaurants = [...state.restaurants].filter(restaurant => restaurant.id !== restaurant.id )
-            return {
-                filteredRestaurants
-            }
-        }
-
         case RESET_FAVOURITE: {
             return {...favouriteInitialState};
         }
@@ -64,6 +56,7 @@ export const interestedReducer = (state = interestedInitialState, action) => {
             return state;
     }
 }
+
 
 export const mainReducer = (state = mainInitialState, action) => {
     switch (action.type) {
