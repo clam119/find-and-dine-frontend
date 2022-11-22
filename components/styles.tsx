@@ -18,7 +18,7 @@ export const secondary = 'gray';
 export const secondaryVariant = 'darkgray';
 
 export const onPrimary = 'white';
-export const onSecondary = 'gray';
+export const onSecondary = 'black';
 export const onSurface = 'transparent';
 export const onBackground = 'lightgrey';
 export const onError = '#800D09';
@@ -81,7 +81,9 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		bottom: '10%',
 		zIndex: 2,
-		fontWeight: 'bold',
+		marginLeft: 5,
+		marginRight: 5,
+		fontFamily: 'NotoSans_700Bold'
 	},
 	container: {
 		width: '100%',
@@ -123,7 +125,7 @@ const styles = StyleSheet.create({
 		alignSelf: "center",
 		top: -55,
 		fontSize: 23,
-		fontWeight: "600"
+		fontFamily: 'BigshotOne_400Regular'
 	},
 	expandedGallery: {
 		backgroundColor: background,
@@ -326,8 +328,8 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		textAlign: 'center',
 		alignSelf: 'center',
-		fontWeight: 'bold',
-		color: primary,
+		color: onSecondary,
+		fontFamily: 'NotoSans_700Bold'
 	},
 	votes: {
 		position: 'absolute',
