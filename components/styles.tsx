@@ -300,10 +300,10 @@ const styles = StyleSheet.create({
 	locationIconText:{
 		position: 'absolute',
 		top: '17%',
-		left: '10%',
-		width: '220%',
+		width: '150%',
 		color: '#3668FF',
 		fontSize: 18,
+		textAlign: 'center'
 	},
 	logo: {
 		aspectRatio: 1,
@@ -342,8 +342,8 @@ const styles = StyleSheet.create({
 	websiteIconText: {
 		position: 'absolute',
 		top: '30%',
-		left: '10%',
-		width: '220%',
+		width: '150%',
+		textAlign: 'center',
 		color: '#3668FF',
 		fontSize: 18,
 	},
