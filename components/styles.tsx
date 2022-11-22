@@ -1,16 +1,7 @@
 /** @format */
 
 import { StyleSheet } from 'react-native';
-/*
-import { Appearance, useColorScheme } from 'react-native';
-const theme = () => {
-  if (useColorScheme() === 'dark') {
-    // render some dark thing
-  } else {
-    // render some light thing
-  }
-}; theme()
-*/
+
 
 export const primary = 'black';
 export const primaryVariant = 'darkgray';
