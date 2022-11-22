@@ -27,7 +27,7 @@ export default function Favourites() {
   return (
     <>
         <Pressable onPress={ handleResetFavourited } style={styles.button}>
-          <Text style={styles.buttonText}>CLEAR</Text>
+          <Text style={styles.buttonText}>Clear</Text>
         </Pressable>
       <Text style={styles.bottomNavBar}></Text>
       <ListTemplate list={FAVOURITED_CONTENT()} />
