@@ -4,9 +4,7 @@ import {
   View,
   FlatList,
   TouchableOpacity,
-  Image,
-  
-
+  Image, 
 } from "react-native";
 
 import styles from "../styles";
@@ -14,7 +12,7 @@ import styles from "../styles";
 
 export function ImageGallery(props: { images: any }) {
   
-const images = props.images.images;
+const images = props.images.images.reverse();
 
   const renderItems: React.FC<{item: string}> = ({item}) => {
     return <TouchableOpacity 
@@ -34,7 +32,8 @@ const images = props.images.images;
         snapToAlignment='start'
         decelerationRate={'fast'}
         snapToInterval={395}
-        
+        showsHorizontalScrollIndicator={true}
+        scrollEnabled={true}
       />
     </View>
   );

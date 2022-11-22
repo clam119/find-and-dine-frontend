@@ -28,6 +28,11 @@ export const ExtendedCard = ({ props }: any) => {
 
 
 
+export const ExtendedCard = ({props}:any) =>{
+let modalSeen = props.modalSeen
+let setModalSeen = props.setModalSeen
+
+
 const data  = props.selectedItem ? props.selectedItem : props.item
 
   const info: Object = {
@@ -45,9 +50,42 @@ const data  = props.selectedItem ? props.selectedItem : props.item
   const link: string = data.website ? data.website : "";
   const nav: string = data.url ? data.url : "";
 
+
   const images: Object = {
     images: data.imageUrls,
   };
+
+return(
+	
+<Modal
+				animationType="slide"
+				transparent={false}
+				visible={modalSeen}
+				onRequestClose={() => {
+					setModalSeen(!modalSeen);
+				}}>
+				<View style= {styles.modalContainer}>
+					<View style={styles.modalContent}>
+						<Text style={styles.expandedCardTitle}
+						numberOfLines={1}>{data.title}</Text>
+				<RestaurantInfo info={info}/>
+				<ReviewsSummary reviews={reviews} />
+						<ImageGallery images={images}/>
+					<Pressable
+						style={styles.modalClose}
+						onPress={() => setModalSeen(!modalSeen)}>
+						<Image
+							style={styles.modalIcon}
+							source={require('../assets/contract-card.png')}
+							resizeMode="cover"
+						/>
+				</Pressable>
+				{nav? <Pressable
+						style={styles.modalNav}
+						onPress={() => Linking.openURL(nav)}>
+						<Ionicons name="location-outline" size={26} color="#3668FF" />
+						<Text style={styles.locationIconText}>Location</Text>
+				</Pressable>:null}
 
   const globalState = useSelector(globalState => globalState)
   const favouritedState = globalState.favourited.restaurants;

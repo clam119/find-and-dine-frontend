@@ -2,6 +2,7 @@
 
 import { Text, View } from 'react-native';
 import styles from '../styles';
+import { background } from '../styles';
 import { onBackground, primary } from '../styles';
 export function ReviewsSummary(props: { reviews: any }) {
 	const reviewObj = props.reviews;
@@ -81,7 +82,7 @@ export function ReviewsSummary(props: { reviews: any }) {
 							}}>
 							<View
 								style={{
-									backgroundColor: primary,
+									backgroundColor: background,
 									alignSelf: 'center',
 									height: '33%',
 									width: `${
