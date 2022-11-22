@@ -147,8 +147,8 @@ const styles = StyleSheet.create({
 		top: '6%',
 		right: '10%',
 		aspectRatio: 1,
-		width: 50,
-		height: 50,
+		width: 80,
+		height: 80,
 		zIndex: 2,
 	},
 	helperIconRight: {
@@ -156,8 +156,8 @@ const styles = StyleSheet.create({
 		top: '6%',
 		left: '10%',
 		aspectRatio: 1,
-		width: 50,
-		height: 50,
+		width: 80,
+		height: 80,
 		zIndex: 2,
 	},
 	imageGallery: {
