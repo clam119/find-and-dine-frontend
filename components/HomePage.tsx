@@ -15,7 +15,6 @@ export default function HomePage() {
   const [id, setId] = useState("");
   useEffect(() => {
     if (swipeDirection !== "--" && parseInt(id) > 0) {
-      //console.log('remove card', id, swipeDirection);
     }
     setSwipeDirection("--");
   }, [id, swipeDirection]);

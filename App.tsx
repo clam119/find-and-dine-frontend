@@ -4,7 +4,6 @@ import HomePage from "./components/HomePage";
 import { store, persistor} from './components/redux/store';
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux';
-import { Text } from "react-native";
 import LoadingPage from "./components/LoadingPage";
 import { useState, useEffect } from "react";
 

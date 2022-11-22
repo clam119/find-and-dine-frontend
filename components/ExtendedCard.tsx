@@ -69,9 +69,6 @@ const images: Object = {
 	images: data.imageUrls
 }
 
-
-
-  
 return(
 	
 <Modal

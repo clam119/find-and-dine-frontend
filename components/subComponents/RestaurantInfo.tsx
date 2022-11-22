@@ -3,7 +3,6 @@
 import { Text, View } from 'react-native';
 import { primary } from '../styles';
 import styles from '../styles';
-import LoadingPage from '../LoadingPage';
 
 
 
