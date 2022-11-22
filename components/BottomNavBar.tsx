@@ -6,7 +6,7 @@ import NotInterested from "./NotInterested";
 import Interested from "./Interested";
 import {Ionicons} from "@expo/vector-icons";
 
-import { secondary, primary, surface, onSurface } from "./styles";
+import styles, { secondary, primary, surface, onSurface } from "./styles";
 const BottomNavButton = createBottomTabNavigator();
 
 export default function BottomNavBar() {

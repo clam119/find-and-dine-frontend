@@ -17,13 +17,13 @@ export function RestaurantInfo(props: { info: any }) {
 		<View style={styles.expandedInfo}>
 			<Text
 				style={{
-					top: -30,
+					top: -26,
 					fontSize: 18,
 					color: primary,
 					textAlign: 'center',
 					alignSelf: 'center',
 					left: '-11%',
-					fontFamily: 'JosefinSans_500Medium'
+					fontFamily: 'Metrophobic_400Regular'
 
 				}}>
 				{info.categoryName}
@@ -35,7 +35,7 @@ export function RestaurantInfo(props: { info: any }) {
 						alignSelf: 'center',
 						fontSize: 15,
 						color: primary,
-						fontFamily: 'JosefinSans_500Medium'
+						fontFamily: 'Metrophobic_400Regular'
 					}}></Text>
 			) : (
 				<></>
@@ -44,7 +44,7 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
-					fontFamily: 'JosefinSans_500Medium'
+					fontFamily: 'Metrophobic_400Regular'
 				}}>
 				{info.address.slice(0, info.address.indexOf(','))}
 			</Text>
@@ -53,7 +53,7 @@ export function RestaurantInfo(props: { info: any }) {
 					fontSize: 15,
 					color: primary,
 					top: -10,
-					fontFamily: 'JosefinSans_500Medium'
+					fontFamily: 'Metrophobic_400Regular'
 				}}>
 				{info.city}
 			</Text>
@@ -63,7 +63,7 @@ export function RestaurantInfo(props: { info: any }) {
 					color: primary,
 					marginBottom: '5%',
 					top: -30,
-					fontFamily: 'JosefinSans_500Medium'
+					fontFamily: 'Metrophobic_400Regular'
 				}}>
 				{info.postalCode}
 			</Text>

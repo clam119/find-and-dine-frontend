@@ -17,19 +17,7 @@ import { RestaurantInfo } from './subComponents/RestaurantInfo';
 import { ReviewsSummary } from './subComponents/ReviewsSummary';
 import {Ionicons, AntDesign} from "@expo/vector-icons";
 
-import { useFonts, BerkshireSwash_400Regular } from '@expo-google-fonts/berkshire-swash'
-import { BigshotOne_400Regular } from '@expo-google-fonts/bigshot-one'
-import { BubblegumSans_400Regular } from '@expo-google-fonts/bubblegum-sans'
-import { BungeeShade_400Regular } from '@expo-google-fonts/bungee-shade'
-import { CaesarDressing_400Regular } from '@expo-google-fonts/caesar-dressing'
-import { ChelseaMarket_400Regular } from '@expo-google-fonts/chelsea-market'
-import { Calistoga_400Regular } from '@expo-google-fonts/calistoga'
-import { CherryCreamSoda_400Regular } from '@expo-google-fonts/cherry-cream-soda'
-import { Gotu_400Regular } from '@expo-google-fonts/gotu'
-import { Jost_800ExtraBold_Italic } from '@expo-google-fonts/jost'
-import { JosefinSans_500Medium } from '@expo-google-fonts/josefin-sans'
-import { Michroma_400Regular } from '@expo-google-fonts/michroma'
-import LoadingPage from './LoadingPage';
+
 
 export const ExtendedCard = ({props}:any) =>{
 let modalSeen = props.modalSeen
@@ -80,27 +68,10 @@ const nav: string = data.url? data.url : ''
 const images: Object = {
 	images: data.imageUrls
 }
-let [fontsLoaded] = useFonts({
-	
-	BerkshireSwash_400Regular,
-	BigshotOne_400Regular,
-	BubblegumSans_400Regular,
-	BungeeShade_400Regular,
-	CaesarDressing_400Regular,
-	Calistoga_400Regular,
-	ChelseaMarket_400Regular,
-	CherryCreamSoda_400Regular,
-	Gotu_400Regular,
-	Jost_800ExtraBold_Italic,
-	JosefinSans_500Medium,
-	Michroma_400Regular
-
-});
 
 
-  if (!fontsLoaded) {
-	return <LoadingPage />;
-  } else {
+
+  
 return(
 	
 <Modal
@@ -157,4 +128,4 @@ return(
 )
 
 }
-}
+

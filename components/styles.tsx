@@ -81,7 +81,8 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		bottom: '10%',
 		zIndex: 2,
-		fontWeight: 'bold',
+		// fontWeight: 'bold',
+		fontFamily: 'NotoSans_700Bold'
 	},
 	container: {
 		width: '100%',
@@ -125,10 +126,10 @@ const styles = StyleSheet.create({
 		fontSize: 23,
 		// fontFamily: 'BerkshireSwash_400Regular'
 		// fontFamily: 'BubblegumSans_400Regular'
-		// fontFamily: 'BigshotOne_400Regular'
+		fontFamily: 'BigshotOne_400Regular'
 		// fontFamily: 'Calistoga_400Regular'
 		// fontFamily: 'ChelseaMarket_400Regular'
-		fontFamily: 'CherryCreamSoda_400Regular'
+		// fontFamily: 'CherryCreamSoda_400Regular'
 		// fontFamily: 'Gotu_400Regular'
 		// fontFamily: 'Jost_800ExtraBold_Italic'
 		// fontFamily: 'JosefinSans_500Medium'
@@ -347,8 +348,9 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		textAlign: 'center',
 		alignSelf: 'center',
-		fontWeight: 'bold',
+		// fontWeight: 'bold',
 		color: onSecondary,
+		fontFamily: 'NotoSans_700Bold'
 	},
 	votes: {
 		position: 'absolute',
