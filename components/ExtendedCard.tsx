@@ -104,7 +104,7 @@ return(
 					
 				<Pressable
 						style={styles.modalFav}
-						onPress={() => Linking.openURL(nav)}>
+						onPress={() => console.log('fave button clicked')}>
 						<Image
 							style={styles.modalIcon}
 							source={require('../assets/star.png')}

@@ -24,13 +24,13 @@ export function ReviewsSummary(props: { reviews: any }) {
 					width: '100%',
 					height: '50%',
 					justifyContent: 'space-around',
-					padding: '5%',
+					padding: '1%',
 				}}>
 				<Text
 					style={{
 						textAlign: 'center',
 						alignSelf: 'center',
-						fontSize: 45,
+						fontSize: 42,
 						color: primary,
 					}}>
 					{votes}
@@ -47,7 +47,7 @@ export function ReviewsSummary(props: { reviews: any }) {
 					style={{
 						textAlign: 'center',
 						alignSelf: 'center',
-						fontSize: 15,
+						fontSize: 12,
 						color: primary,
 					}}>
 					{reviewObj.reviewsCount} reviews
@@ -60,7 +60,8 @@ export function ReviewsSummary(props: { reviews: any }) {
 					flexDirection: 'column',
 					flexWrap: 'nowrap',
 					justifyContent: 'space-around',
-					padding: '10%',
+					paddingTop: '2%',
+					paddingBottom: '10%',
 				}}>
 				{[
 					[5, reviewObj.reviewsDistribution.fiveStar],

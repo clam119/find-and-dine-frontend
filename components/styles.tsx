@@ -108,13 +108,13 @@ const styles = StyleSheet.create({
 		top: 0,
 	},
 	expandedInfo: {
-		margin: '1%',
+		marginTop: '4%',
 		position: 'absolute',
 		width: '48%',
 		height: '38%',
 		borderRadius: 10,
 		justifyContent: 'space-evenly',
-		padding: '5%',
+		padding: '0%',
 	},
 	expendedCardTitle:{
 		alignSelf: "center",
