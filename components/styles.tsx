@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
 		fontSize: 23,
 		fontFamily: 'BigshotOne_400Regular'
 	},
-	
+
 	expandedGallery: {
 		backgroundColor: background,
 		margin: '1%',
@@ -303,8 +303,10 @@ const styles = StyleSheet.create({
 	locationIconText:{
 		position: 'absolute',
 		top: '10%',
-		left: '40%',
-		color: '#3668FF'
+		left: '10%',
+		width: '220%',
+		color: '#3668FF',
+		fontSize: 18,
 	},
 	logo: {
 		aspectRatio: 1,
@@ -343,9 +345,12 @@ const styles = StyleSheet.create({
 	websiteIconText: {
 		position: 'absolute',
 		top: '10%',
-		left: '50%',
-		color: '#3668FF'
+		left: '10%',
+		width: '220%',
+		color: '#3668FF',
+		fontSize: 18,
 	},
+	
 	button: {
 		margin: 10,
 		padding: 10,
