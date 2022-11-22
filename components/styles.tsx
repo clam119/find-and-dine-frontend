@@ -18,7 +18,7 @@ export const secondary = 'gray';
 export const secondaryVariant = 'darkgray';
 
 export const onPrimary = 'white';
-export const onSecondary = 'gray';
+export const onSecondary = 'black';
 export const onSurface = 'transparent';
 export const onBackground = 'lightgrey';
 export const onError = '#800D09';
