@@ -99,8 +99,18 @@ return(
 							style={styles.modalIcon}
 							source={require('../assets/gps.png')}
 							resizeMode="cover"
-						/>
-				</Pressable>:null}
+					/></Pressable>:null}
+					
+					
+				<Pressable
+						style={styles.modalFav}
+						onPress={() => Linking.openURL(nav)}>
+						<Image
+							style={styles.modalIcon}
+							source={require('../assets/star.png')}
+							resizeMode="cover"
+						/></Pressable>
+				
 				{link? <Pressable
 						style={styles.modalLink}
 						onPress={() => Linking.openURL(link)}>
