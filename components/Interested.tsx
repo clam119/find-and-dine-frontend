@@ -28,7 +28,7 @@ export default function Interested () {
     return (
     <>
         <Pressable onPress={ handleResetInterested } style={styles.button}>
-          <Text style={styles.buttonText}>RESET INTERESTED</Text>
+          <Text style={styles.buttonText}>Clear</Text>
         </Pressable>
         
         <Text style={styles.bottomNavBar}></Text>
