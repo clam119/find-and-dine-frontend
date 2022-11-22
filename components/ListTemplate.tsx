@@ -40,7 +40,7 @@ const Item = (props: { item: { image: any; title: string | number | boolean | Re
       <Image
 						style={styles.modalListIcon}
 						source={require('../assets/expand-card.png')}
-						resizeMode="contain"
+						resizeMode="cover"
 					/>
        </View> 
         

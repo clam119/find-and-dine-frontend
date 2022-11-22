@@ -12,10 +12,10 @@ const theme = () => {
 }; theme()
 */
 
-export const primary = 'black';
+export const primary = '#2C000A';
 export const primaryVariant = 'darkgray';
-export const secondary = 'gray';
-export const secondaryVariant = 'darkgray';
+export const secondary = '#950023';
+export const secondaryVariant = '#950023';
 
 export const onPrimary = 'white';
 export const onSecondary = 'black';
@@ -267,23 +267,25 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 	},
 	modalListIcon: {
+
 		aspectRatio: 1,
-		height: 45,
-		width: 45,
+		top: '33%',
+		width: 40,
+		height: 40,
 		padding: '0%',
 		justifyContent: 'center',
 		alignSelf: 'center',
 		zIndex: 2,
 	},
 	modalListIconContainer: {
-		left: '85%',
-		top: '5%',
-		height: '90%',
+		left: '84.8%',
+		top: '4%',
+		height: '92%',
 		width: 50,
 		position: 'absolute',
 		zIndex: 1,
 		backgroundColor: secondaryVariant,
-		borderRadius: 50,
+		borderRadius: 10,
 		borderWidth: 4,
 		borderColor: primary,
 	},
@@ -329,12 +331,14 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	titleList: {
-		flex: 1,
+		position: 'absolute',
+		left: '33%',
+		right: '16%',
 		fontSize: 18,
 		textAlign: 'center',
 		alignSelf: 'center',
 		color: onSecondary,
-		fontFamily: 'NotoSans_700Bold'
+		fontFamily: 'NotoSans_700Bold',
 	},
 	votes: {
 		position: 'absolute',
