@@ -96,7 +96,6 @@ const data  = props.selectedItem ? props.selectedItem : props.item
               style={styles.modalNav}
               onPress={() => Linking.openURL(nav)}
             >
-              
               <Text style={styles.locationIconText}><Ionicons name="location-outline" size={22} color="#3668FF" /> Location</Text>
             </Pressable>
           ) : null}
@@ -117,7 +116,6 @@ const data  = props.selectedItem ? props.selectedItem : props.item
               style={styles.modalLink}
               onPress={() => Linking.openURL(link)}
             >
-              
               <Text style={styles.websiteIconText} numberOfLines={1}><Ionicons name="ios-globe-outline" size={22} color="#3668FF" /> Website</Text>
             </Pressable>
           ) : null}

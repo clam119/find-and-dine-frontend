@@ -101,16 +101,13 @@ const styles = StyleSheet.create({
 		top: 0,
 	},
 	expandedInfo: {
-		top: '-2%',
-		left: '3%',
-		marginTop: '4%',
+		top:'2%',
+		left: '2%',
 		position: 'absolute',
 		width: '48%',
-		height: '38%',
-		borderRadius: 10,
-		justifyContent: 'space-evenly',
+		height: '31%',
+		justifyContent: 'space-around',
 		padding: '0%',
-
 	},
 	expandedCardTitle:{
 		alignSelf: "center",
@@ -302,7 +299,7 @@ const styles = StyleSheet.create({
 	},
 	locationIconText:{
 		position: 'absolute',
-		top: '10%',
+		top: '17%',
 		left: '10%',
 		width: '220%',
 		color: '#3668FF',
@@ -344,7 +341,7 @@ const styles = StyleSheet.create({
 	},
 	websiteIconText: {
 		position: 'absolute',
-		top: '10%',
+		top: '30%',
 		left: '10%',
 		width: '220%',
 		color: '#3668FF',
