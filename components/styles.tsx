@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
 		fontSize: 23,
 		fontFamily: 'BigshotOne_400Regular'
 	},
+	
 	expandedGallery: {
 		backgroundColor: background,
 		margin: '1%',
@@ -200,10 +201,10 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold'
 	},
 	modalContainer: {
-		top: '10%',
+		top: '7%',
 		left: '0%',
 		width: '100%',
-		height: '100%',
+		height: '93%',
 		position: 'absolute',
 		borderRadius: 0,
 		borderWidth: 0,
@@ -214,7 +215,7 @@ const styles = StyleSheet.create({
 		left: '7%',
 		right: '7%',
 		width: '85%',
-		height: '80%',
+		height: '86%',
 		position: 'absolute',
 		borderRadius: 13,
 		borderWidth: 0,

@@ -75,7 +75,7 @@ const data  = props.selectedItem ? props.selectedItem : props.item
     >
       <View style={styles.modalContainer}>
         <View style={styles.modalContent}>
-          <Text style={styles.expendedCardTitle} numberOfLines={1}>
+          <Text style={styles.expandedCardTitle} numberOfLines={1}>
             {data.title}
           </Text>
           <RestaurantInfo info={info} />
