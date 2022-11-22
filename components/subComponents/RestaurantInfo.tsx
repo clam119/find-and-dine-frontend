@@ -10,7 +10,6 @@ export function RestaurantInfo(props: { info: any }) {
 	const info = props.info;
 
 	const categories = info.categories.filter((cat: any) => cat !== info.categoryName);
-	console.log(info.categories, categories)
 	
 	return (
 		<View style={styles.expandedInfo}>
