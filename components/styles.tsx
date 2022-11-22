@@ -49,8 +49,9 @@ const styles = StyleSheet.create({
 	},
 	binIcon: {
 		padding: 30,
-		right: '16%',
+		right: '6%',
 		backgroundColor: onError,
+
 	},
 	card: {
 		width: '85%',
@@ -318,8 +319,8 @@ const styles = StyleSheet.create({
 		margin: '0%',
 	},
 	refreshIcon: {
-		padding: 30,
-		left: '16%',
+		padding:'10%',
+		left: '5%',
 		backgroundColor: onSuccess,
 	},
 	title: {

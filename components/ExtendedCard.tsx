@@ -17,11 +17,10 @@ import { RestaurantInfo } from './subComponents/RestaurantInfo';
 import { ReviewsSummary } from './subComponents/ReviewsSummary';
 import {Ionicons, AntDesign} from "@expo/vector-icons";
 
-
 export const ExtendedCard = ({props}:any) =>{
 let modalSeen = props.modalSeen
 let setModalSeen = props.setModalSeen
-	
+
 /*
 const data  = props.selectedItem ? props.selectedItem : props.item
 */
