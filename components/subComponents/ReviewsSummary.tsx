@@ -6,7 +6,7 @@ import { background } from '../styles';
 import { onBackground, primary } from '../styles';
 export function ReviewsSummary(props: { reviews: any }) {
 	const reviewObj = props.reviews;
-console.log(reviewObj.reviewsDistribution.fiveStar)
+
 	const votes =
 		Math.round(
 			(10 *
