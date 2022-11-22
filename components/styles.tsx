@@ -242,16 +242,18 @@ const styles = StyleSheet.create({
 		margin: '5%',
 	},
 	modalLink: {
-		right: '91%',
-		top: '96%',
+		left: '2%',
+		top: '30%',
 		height: '10%',
 		aspectRatio: 1,
-		backgroundColor: secondary,
-		borderRadius: 50,
-		borderWidth: 5,
-		borderColor: secondaryVariant,
 		padding: '1%',
 		position: 'absolute',
+	},
+	websiteIconText: {
+		position: 'absolute',
+		top: '10%',
+		left: '40%',
+		color: '#3668FF'
 	},
 	modalListIcon: {
 		aspectRatio: 1,
@@ -279,17 +281,18 @@ const styles = StyleSheet.create({
 		zIndex: 2,
 	},
 	modalNav: {
-		right: '65%',
-		top: '36.5%',
+		left: '1.5%',
+		top: '35%',
 		height: '10%',
 		aspectRatio: 1,
-		backgroundColor: secondary,
-		borderRadius: 50,
-		borderWidth: 5,
-		borderColor: secondaryVariant,
-		padding: '1%',
 		position: 'absolute',
 		zIndex: 2,
+	},
+	locationIconText:{
+		position: 'absolute',
+		top: '10%',
+		left: '40%',
+		color: 'red'
 	},
 	logo: {
 		aspectRatio: 1,
@@ -335,6 +338,7 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		color: '#444',
 	},
+
 });
 
 export default styles;
