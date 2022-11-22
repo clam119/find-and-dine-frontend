@@ -351,7 +351,7 @@ const styles = StyleSheet.create({
 	websiteIconText: {
 		position: 'absolute',
 		top: '10%',
-		left: '40%',
+		left: '50%',
 		color: '#3668FF'
 	},
 	button: {
