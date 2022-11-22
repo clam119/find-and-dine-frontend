@@ -15,7 +15,7 @@ import styles from './styles';
 import { ImageGallery } from './subComponents/ImageGallery';
 import { RestaurantInfo } from './subComponents/RestaurantInfo';
 import { ReviewsSummary } from './subComponents/ReviewsSummary';
-import {Ionicons} from "@expo/vector-icons";
+import {Ionicons, AntDesign} from "@expo/vector-icons";
 
 
 export const ExtendedCard = ({props}:any) =>{
@@ -96,25 +96,19 @@ return(
 				{nav? <Pressable
 						style={styles.modalNav}
 						onPress={() => Linking.openURL(nav)}>
-
 						<Ionicons name="location-outline" size={26} color="red" />
 						<Text style={styles.locationIconText}>Location</Text>
 				</Pressable>:null}
-						<Image
-							style={styles.modalIcon}
-							source={require('../assets/gps.png')}
-							resizeMode="cover"
-					/></Pressable>:null}
-					
-					
+
 				<Pressable
 						style={styles.modalFav}
 						onPress={() => console.log('fave button clicked')}>
 						<Image
 							style={styles.modalIcon}
-							source={require('../assets/star.png')}
+							source={require('../assets/yellowStar.png')}
 							resizeMode="cover"
-						/></Pressable>
+						/>
+				</Pressable>
 				
 
 				{link? <Pressable
