@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   Image,
   
-
 } from "react-native";
 
 import styles from "../styles";

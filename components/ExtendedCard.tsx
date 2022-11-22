@@ -76,7 +76,7 @@ return(
 				onRequestClose={() => {
 					setModalSeen(!modalSeen);
 				}}>
-				<View style={styles.modalContainer}>
+				<View style= {styles.modalContainer}>
 					<View style={styles.modalContent}>
 						<Text style={styles.expandedCardTitle}
 						numberOfLines={1}>{data.title}</Text>

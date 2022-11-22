@@ -4,20 +4,26 @@ import { Text, View } from 'react-native';
 import { primary } from '../styles';
 import styles from '../styles';
 
+
+
 export function RestaurantInfo(props: { info: any }) {
 	const info = props.info;
 
 	const categories = info.categories.filter((cat: any) => cat !== info.categoryName);
+
+	
 	return (
 		<View style={styles.expandedInfo}>
 			<Text
 				style={{
-					top: -30,
+					top: -26,
 					fontSize: 18,
 					color: primary,
 					textAlign: 'center',
 					alignSelf: 'center',
-					left: '-11%'
+					left: '-11%',
+					fontFamily: 'Metrophobic_400Regular'
+
 				}}>
 				{info.categoryName}
 			</Text>
@@ -28,6 +34,7 @@ export function RestaurantInfo(props: { info: any }) {
 						alignSelf: 'center',
 						fontSize: 15,
 						color: primary,
+						fontFamily: 'Metrophobic_400Regular'
 					}}></Text>
 			) : (
 				<></>
@@ -36,6 +43,7 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
+					fontFamily: 'Metrophobic_400Regular'
 				}}>
 				{info.address.slice(0, info.address.indexOf(','))}
 			</Text>
@@ -43,7 +51,8 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
-					top: -10
+					top: -10,
+					fontFamily: 'Metrophobic_400Regular'
 				}}>
 				{info.city}
 			</Text>
@@ -52,10 +61,12 @@ export function RestaurantInfo(props: { info: any }) {
 					fontSize: 15,
 					color: primary,
 					marginBottom: '5%',
-					top: -30
+					top: -30,
+					fontFamily: 'Metrophobic_400Regular'
 				}}>
 				{info.postalCode}
 			</Text>
 		</View>
 	);
 }
+
