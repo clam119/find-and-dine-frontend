@@ -20,12 +20,12 @@ export const secondaryVariant = 'darkgray';
 export const onPrimary = 'white';
 export const onSecondary = 'gray';
 export const onSurface = 'transparent';
-export const onBackground = 'white';
-export const onError = '#DC143C';
+export const onBackground = 'lightgrey';
+export const onError = '#800D09';
 export const onSuccess = '#50C878';
 
-export const surface = 'lightgray';
-export const background = 'gray';
+export const surface = '#F5F5F4';
+export const background = '#D50033';
 
 const styles = StyleSheet.create({
 	backgroundImage: {
@@ -119,11 +119,11 @@ const styles = StyleSheet.create({
 		padding: '0%',
 
 	},
-	expendedCardTitle:{
+	expandedCardTitle:{
 		alignSelf: "center",
-		top: -40,
+		top: -55,
 		fontSize: 23,
-
+		fontWeight: "600"
 	},
 	expandedGallery: {
 		backgroundColor: background,
@@ -208,35 +208,48 @@ const styles = StyleSheet.create({
 	},
 	modalContainer: {
 		top: '10%',
-		left: '7.5%',
-		width: '85%',
-		height: '82.5%',
+		left: '0%',
+		width: '100%',
+		height: '100%',
 		position: 'absolute',
-		borderRadius: 13,
+		borderRadius: 0,
 		borderWidth: 0,
 		backgroundColor: background,
 	},
 	modalContent: {
-		top: '1.5%',
-		left: '2.5%',
-		width: '95%',
-		height: '97%',
+		top: '3%',
+		left: '7%',
+		right: '7%',
+		width: '85%',
+		height: '80%',
 		position: 'absolute',
 		borderRadius: 13,
 		borderWidth: 0,
 		backgroundColor: surface,
 	},
 	modalClose: {
-		left: '91%',
+		left: '87%',
 		top: '96%',
 		height: '10%',
 		aspectRatio: 1,
-		backgroundColor: secondary,
+		backgroundColor: background,
 		borderRadius: 50,
 		borderWidth: 5,
-		borderColor: secondaryVariant,
+		borderColor: primary,
 		padding: '1%',
 		position: 'absolute',
+	},
+	modalFav: {
+		right: '86%',
+		bottom: '-6%',
+		height: '10%',
+		aspectRatio: 1,
+		position: 'absolute',
+		zIndex: 2,
+		backgroundColor: background,
+		borderRadius: 50,
+		borderWidth: 5,
+		borderColor: primary,
 	},
 	modalIcon: {
 		width: '90%',
@@ -251,21 +264,15 @@ const styles = StyleSheet.create({
 		padding: '1%',
 		position: 'absolute',
 	},
-	websiteIconText: {
-		position: 'absolute',
-		top: '10%',
-		left: '40%',
-		color: '#3668FF'
-	},
 	modalListIcon: {
 		aspectRatio: 1,
 		height: 50,
 		width: 50,
 		marginTop: '7%',
-		backgroundColor: secondary,
+		backgroundColor: background,
 		borderRadius: 50,
 		borderWidth: 3,
-		borderColor: secondaryVariant,
+		borderColor: primary,
 		padding: '4%',
 		textAlign: 'center',
 		alignSelf: 'flex-start',
@@ -292,23 +299,11 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		zIndex: 2,
 	},
-	modalFav: {
-		right: '85%',
-		bottom: '-5%',
-		height: '10%',
-		aspectRatio: 1,
-		position: 'absolute',
-		zIndex: 2,
-		backgroundColor: secondary,
-		borderRadius: 50,
-		borderWidth: 3,
-		borderColor: secondaryVariant,
-	},
 	locationIconText:{
 		position: 'absolute',
 		top: '10%',
 		left: '40%',
-		color: 'red'
+		color: '#3668FF'
 	},
 	logo: {
 		aspectRatio: 1,
@@ -332,7 +327,7 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		alignSelf: 'center',
 		fontWeight: 'bold',
-		color: onSecondary,
+		color: primary,
 	},
 	votes: {
 		position: 'absolute',
@@ -341,6 +336,12 @@ const styles = StyleSheet.create({
 		bottom: '5.5%',
 		left: '4.5%',
 		zIndex: 2,
+	},
+	websiteIconText: {
+		position: 'absolute',
+		top: '10%',
+		left: '40%',
+		color: '#3668FF'
 	},
 	button: {
 		margin: 10,
