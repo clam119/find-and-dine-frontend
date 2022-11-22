@@ -3,11 +3,16 @@
 import { Text, View } from 'react-native';
 import { primary } from '../styles';
 import styles from '../styles';
+import LoadingPage from '../LoadingPage';
+
+
 
 export function RestaurantInfo(props: { info: any }) {
 	const info = props.info;
 
 	const categories = info.categories.filter((cat: any) => cat !== info.categoryName);
+
+	
 	return (
 		<View style={styles.expandedInfo}>
 			<Text
@@ -17,7 +22,9 @@ export function RestaurantInfo(props: { info: any }) {
 					color: primary,
 					textAlign: 'center',
 					alignSelf: 'center',
-					left: '-11%'
+					left: '-11%',
+					fontFamily: 'JosefinSans_500Medium'
+
 				}}>
 				{info.categoryName}
 			</Text>
@@ -28,6 +35,7 @@ export function RestaurantInfo(props: { info: any }) {
 						alignSelf: 'center',
 						fontSize: 15,
 						color: primary,
+						fontFamily: 'JosefinSans_500Medium'
 					}}></Text>
 			) : (
 				<></>
@@ -36,6 +44,7 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
+					fontFamily: 'JosefinSans_500Medium'
 				}}>
 				{info.address.slice(0, info.address.indexOf(','))}
 			</Text>
@@ -43,7 +52,8 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
-					top: -10
+					top: -10,
+					fontFamily: 'JosefinSans_500Medium'
 				}}>
 				{info.city}
 			</Text>
@@ -52,10 +62,12 @@ export function RestaurantInfo(props: { info: any }) {
 					fontSize: 15,
 					color: primary,
 					marginBottom: '5%',
-					top: -30
+					top: -30,
+					fontFamily: 'JosefinSans_500Medium'
 				}}>
 				{info.postalCode}
 			</Text>
 		</View>
 	);
 }
+

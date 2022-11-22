@@ -123,7 +123,23 @@ const styles = StyleSheet.create({
 		alignSelf: "center",
 		top: -40,
 		fontSize: 23,
-
+		// fontFamily: 'BerkshireSwash_400Regular'
+		// fontFamily: 'BubblegumSans_400Regular'
+		// fontFamily: 'BigshotOne_400Regular'
+		// fontFamily: 'Calistoga_400Regular'
+		// fontFamily: 'ChelseaMarket_400Regular'
+		fontFamily: 'CherryCreamSoda_400Regular'
+		// fontFamily: 'Gotu_400Regular'
+		// fontFamily: 'Jost_800ExtraBold_Italic'
+		// fontFamily: 'JosefinSans_500Medium'
+		// fontFamily: 'Michroma_400Regular'
+		// fontFamily: ''
+		// fontFamily: ''
+		// fontFamily: ''
+		// fontFamily: ''
+		// fontFamily: ''
+		// fontFamily: ''
+		// fontFamily: ''
 	},
 	expandedGallery: {
 		backgroundColor: background,
