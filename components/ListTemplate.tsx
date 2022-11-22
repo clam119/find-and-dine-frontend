@@ -19,14 +19,14 @@ interface ObjectInterface {
 }
 
 
-const Item = (props: { item: { image: any; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; votes: number; }; setModalSeen: (arg0: boolean) => void; setSelectedItem: any; }) => {
+const Item = (props: { item: { imageUrls: string[]; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; votes: number; }; setModalSeen: (arg0: boolean) => void; setSelectedItem: any; }) => {
   
   return (
     <View style={styles.item}>
       <Image
         style={styles.logo}
         source={{
-          uri: props.item.image,
+          uri: props.item.imageUrls[0],
         }}
         ></Image>
       <Text style={styles.titleList}>{props.item.title}</Text>
