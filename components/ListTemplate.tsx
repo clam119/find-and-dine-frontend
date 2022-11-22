@@ -35,13 +35,14 @@ const Item = (props: { item: { imageUrls: string[]; title: string | number | boo
               onPress={() => {
           props.setModalSeen(true);
           props.setSelectedItem(props.item)
-              }}>
+        }}>
+        <View style={styles.modalListIconContainer}>
       <Image
 						style={styles.modalListIcon}
 						source={require('../assets/expand-card.png')}
 						resizeMode="cover"
 					/>
-        
+       </View> 
         
       </TouchableWithoutFeedback>
     </View>

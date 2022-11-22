@@ -12,15 +12,15 @@ const theme = () => {
 }; theme()
 */
 
-export const primary = 'black';
+export const primary = '#2C000A';
 export const primaryVariant = 'darkgray';
-export const secondary = 'gray';
-export const secondaryVariant = 'darkgray';
+export const secondary = '#950023';
+export const secondaryVariant = '#950023';
 
 export const onPrimary = 'white';
 export const onSecondary = 'black';
 export const onSurface = 'transparent';
-export const onBackground = 'lightgrey';
+export const onBackground = '#E9CCD3';
 export const onError = '#800D09';
 export const onSuccess = '#50C878';
 
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
 		top: '96%',
 		height: '10%',
 		aspectRatio: 1,
-		backgroundColor: background,
+		backgroundColor: secondaryVariant,
 		borderRadius: 50,
 		borderWidth: 5,
 		borderColor: primary,
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
 		aspectRatio: 1,
 		position: 'absolute',
 		zIndex: 2,
-		backgroundColor: background,
+		backgroundColor: secondaryVariant,
 		borderRadius: 50,
 		borderWidth: 5,
 		borderColor: primary,
@@ -267,20 +267,27 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 	},
 	modalListIcon: {
+
 		aspectRatio: 1,
-		height: 50,
-		width: 50,
-		marginTop: '7%',
-		backgroundColor: background,
-		borderRadius: 50,
-		borderWidth: 3,
-		borderColor: primary,
-		padding: '4%',
-		textAlign: 'center',
-		alignSelf: 'flex-start',
-		top: '2.5%',
-		right: '4.5%',
+		top: '33%',
+		width: 40,
+		height: 40,
+		padding: '0%',
+		justifyContent: 'center',
+		alignSelf: 'center',
 		zIndex: 2,
+	},
+	modalListIconContainer: {
+		left: '84.8%',
+		top: '4%',
+		height: '92%',
+		width: 50,
+		position: 'absolute',
+		zIndex: 1,
+		backgroundColor: secondaryVariant,
+		borderRadius: 10,
+		borderWidth: 4,
+		borderColor: primary,
 	},
 	modalOpen: {
 		position: 'absolute',
@@ -324,12 +331,14 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	titleList: {
-		flex: 1,
+		position: 'absolute',
+		left: '33%',
+		right: '16%',
 		fontSize: 18,
 		textAlign: 'center',
 		alignSelf: 'center',
 		color: onSecondary,
-		fontFamily: 'NotoSans_700Bold'
+		fontFamily: 'NotoSans_700Bold',
 	},
 	votes: {
 		position: 'absolute',
@@ -342,7 +351,7 @@ const styles = StyleSheet.create({
 	websiteIconText: {
 		position: 'absolute',
 		top: '10%',
-		left: '40%',
+		left: '50%',
 		color: '#3668FF'
 	},
 	button: {
