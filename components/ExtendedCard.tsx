@@ -79,7 +79,7 @@ return(
 				}}>
 				<View style={styles.modalContainer}>
 					<View style={styles.modalContent}>
-						<Text style={styles.expendedCardTitle}
+						<Text style={styles.expandedCardTitle}
 						numberOfLines={1}>{data.title}</Text>
 				<RestaurantInfo info={info}/>
 				<ReviewsSummary reviews={reviews} />
