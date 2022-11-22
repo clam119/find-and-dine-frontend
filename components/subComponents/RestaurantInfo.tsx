@@ -10,14 +10,13 @@ export function RestaurantInfo(props: { info: any }) {
 	const categories = info.categories.filter((cat: any) => cat !== info.categoryName);
 	return (
 		<View style={styles.expandedInfo}>
-			<Text 
-				style = {{
+			<Text
+				style={{
 					top: -20,
-					fontSize: 21,
+					fontSize: 18,
 					color: primary,
-					fontFamily: "Optima",
-					marginBottom: 20,
-
+					textAlign: 'center',
+					alignSelf: 'center',
 				}}>
 				{info.categoryName}
 			</Text>
@@ -28,9 +27,7 @@ export function RestaurantInfo(props: { info: any }) {
 						alignSelf: 'center',
 						fontSize: 15,
 						color: primary,
-					}}>
-					{}
-				</Text>
+					}}></Text>
 			) : (
 				<></>
 			)}
@@ -38,7 +35,6 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
-					top: -50,
 				}}>
 				{info.address.slice(0, info.address.indexOf(','))}
 			</Text>
@@ -46,7 +42,6 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
-					top: -55,
 				}}>
 				{info.city}
 			</Text>
@@ -54,7 +49,7 @@ export function RestaurantInfo(props: { info: any }) {
 				style={{
 					fontSize: 15,
 					color: primary,
-					top:-60,
+					marginBottom: '5%'
 				}}>
 				{info.postalCode}
 			</Text>

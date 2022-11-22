@@ -108,19 +108,18 @@ const styles = StyleSheet.create({
 		top: 0,
 	},
 	expandedInfo: {
-		margin: '1%',
+		marginTop: '4%',
 		position: 'absolute',
 		width: '48%',
 		height: '38%',
 		borderRadius: 10,
 		justifyContent: 'space-evenly',
-		padding: '5%',
+		padding: '0%',
 	},
 	expendedCardTitle:{
 		alignSelf: "center",
 		top: -40,
 		fontSize: 23,
-		fontFamily: "Optima-Bold",
 
 	},
 	expandedGallery: {
@@ -283,6 +282,16 @@ const styles = StyleSheet.create({
 	modalNav: {
 		left: '1.5%',
 		top: '35%',
+		right: '93%',
+		top: '36.5%',
+		height: '10%',
+		aspectRatio: 1,
+		position: 'absolute',
+		zIndex: 2,
+	},
+	modalFav: {
+		right: '40%',
+		top: '36.5%',
 		height: '10%',
 		aspectRatio: 1,
 		position: 'absolute',

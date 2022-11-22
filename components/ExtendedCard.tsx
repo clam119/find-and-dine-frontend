@@ -96,9 +96,27 @@ return(
 				{nav? <Pressable
 						style={styles.modalNav}
 						onPress={() => Linking.openURL(nav)}>
+
 						<Ionicons name="location-outline" size={26} color="red" />
 						<Text style={styles.locationIconText}>Location</Text>
 				</Pressable>:null}
+						<Image
+							style={styles.modalIcon}
+							source={require('../assets/gps.png')}
+							resizeMode="cover"
+					/></Pressable>:null}
+					
+					
+				<Pressable
+						style={styles.modalFav}
+						onPress={() => console.log('fave button clicked')}>
+						<Image
+							style={styles.modalIcon}
+							source={require('../assets/star.png')}
+							resizeMode="cover"
+						/></Pressable>
+				
+
 				{link? <Pressable
 						style={styles.modalLink}
 						onPress={() => Linking.openURL(link)}>
