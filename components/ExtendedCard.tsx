@@ -15,6 +15,7 @@ import styles from './styles';
 import { ImageGallery } from './subComponents/ImageGallery';
 import { RestaurantInfo } from './subComponents/RestaurantInfo';
 import { ReviewsSummary } from './subComponents/ReviewsSummary';
+import {Ionicons} from "@expo/vector-icons";
 
 
 export const ExtendedCard = ({props}:any) =>{
@@ -95,6 +96,10 @@ return(
 				{nav? <Pressable
 						style={styles.modalNav}
 						onPress={() => Linking.openURL(nav)}>
+
+						<Ionicons name="location-outline" size={26} color="red" />
+						<Text style={styles.locationIconText}>Location</Text>
+				</Pressable>:null}
 						<Image
 							style={styles.modalIcon}
 							source={require('../assets/gps.png')}
@@ -111,14 +116,12 @@ return(
 							resizeMode="cover"
 						/></Pressable>
 				
+
 				{link? <Pressable
 						style={styles.modalLink}
 						onPress={() => Linking.openURL(link)}>
-						<Image
-							style={styles.modalIcon}
-							source={require('../assets/globe.png')}
-							resizeMode="cover"
-						/>
+					<Ionicons name="ios-globe-outline" size={22} color="#3668FF" />
+					<Text style={styles.websiteIconText}>Website</Text>
 				</Pressable>:null}
 				
 					</View>
