@@ -20,7 +20,7 @@ export const secondaryVariant = '#950023';
 export const onPrimary = 'white';
 export const onSecondary = 'black';
 export const onSurface = 'transparent';
-export const onBackground = 'lightgrey';
+export const onBackground = '#E9CCD3';
 export const onError = '#800D09';
 export const onSuccess = '#50C878';
 
