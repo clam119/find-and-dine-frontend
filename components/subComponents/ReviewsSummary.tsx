@@ -90,7 +90,7 @@ export function ReviewsSummary(props: { reviews: any }) {
 											? (Num[1] /
 													reviewObj.reviewsCount) *
 											  100 *
-											  1.2
+											  0.8
 											: 0
 									}%`,
 									borderRadius: 12,

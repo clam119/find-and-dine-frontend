@@ -1,16 +1,7 @@
 /** @format */
 
 import { StyleSheet } from 'react-native';
-/*
-import { Appearance, useColorScheme } from 'react-native';
-const theme = () => {
-  if (useColorScheme() === 'dark') {
-    // render some dark thing
-  } else {
-    // render some light thing
-  }
-}; theme()
-*/
+
 
 export const primary = '#2C000A';
 export const primaryVariant = 'darkgray';
@@ -156,8 +147,8 @@ const styles = StyleSheet.create({
 		top: '6%',
 		right: '10%',
 		aspectRatio: 1,
-		width: 50,
-		height: 50,
+		width: 80,
+		height: 80,
 		zIndex: 2,
 	},
 	helperIconRight: {
@@ -165,8 +156,8 @@ const styles = StyleSheet.create({
 		top: '6%',
 		left: '10%',
 		aspectRatio: 1,
-		width: 50,
-		height: 50,
+		width: 80,
+		height: 80,
 		zIndex: 2,
 	},
 	imageGallery: {
