@@ -101,16 +101,13 @@ const styles = StyleSheet.create({
 		top: 0,
 	},
 	expandedInfo: {
-		top: '-2%',
-		left: '3%',
-		marginTop: '4%',
+		top:'2%',
+		left: '2%',
 		position: 'absolute',
 		width: '48%',
-		height: '38%',
-		borderRadius: 10,
-		justifyContent: 'space-evenly',
+		height: '31%',
+		justifyContent: 'space-around',
 		padding: '0%',
-
 	},
 	expandedCardTitle:{
 		alignSelf: "center",
@@ -118,6 +115,7 @@ const styles = StyleSheet.create({
 		fontSize: 23,
 		fontFamily: 'BigshotOne_400Regular'
 	},
+
 	expandedGallery: {
 		backgroundColor: background,
 		margin: '1%',
@@ -200,10 +198,10 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold'
 	},
 	modalContainer: {
-		top: '10%',
+		top: '7%',
 		left: '0%',
 		width: '100%',
-		height: '100%',
+		height: '93%',
 		position: 'absolute',
 		borderRadius: 0,
 		borderWidth: 0,
@@ -214,7 +212,7 @@ const styles = StyleSheet.create({
 		left: '7%',
 		right: '7%',
 		width: '85%',
-		height: '80%',
+		height: '86%',
 		position: 'absolute',
 		borderRadius: 13,
 		borderWidth: 0,
@@ -301,9 +299,11 @@ const styles = StyleSheet.create({
 	},
 	locationIconText:{
 		position: 'absolute',
-		top: '10%',
-		left: '40%',
-		color: '#3668FF'
+		top: '17%',
+		width: '150%',
+		color: '#3668FF',
+		fontSize: 18,
+		textAlign: 'center'
 	},
 	logo: {
 		aspectRatio: 1,
@@ -341,10 +341,13 @@ const styles = StyleSheet.create({
 	},
 	websiteIconText: {
 		position: 'absolute',
-		top: '10%',
-		left: '50%',
-		color: '#3668FF'
+		top: '30%',
+		width: '150%',
+		textAlign: 'center',
+		color: '#3668FF',
+		fontSize: 18,
 	},
+	
 	button: {
 		margin: 10,
 		padding: 10,
