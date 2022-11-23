@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
 	},
 	expandedInfo: {
 		top:'2%',
-		left: '2%',
+		textAlign: 'left',
 		position: 'absolute',
 		width: '48%',
 		height: '31%',
@@ -198,10 +198,10 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold'
 	},
 	modalContainer: {
-		top: '7%',
+		top: '10%',
 		left: '0%',
 		width: '100%',
-		height: '93%',
+		height: '90%',
 		position: 'absolute',
 		borderRadius: 0,
 		borderWidth: 0,
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
 		left: '7%',
 		right: '7%',
 		width: '85%',
-		height: '86%',
+		height: '90%',
 		position: 'absolute',
 		borderRadius: 13,
 		borderWidth: 0,
@@ -256,7 +256,6 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 	},
 	modalListIcon: {
-
 		aspectRatio: 1,
 		top: '33%',
 		width: 40,
