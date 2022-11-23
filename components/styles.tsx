@@ -297,13 +297,20 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		zIndex: 2,
 	},
+	websiteIconText: {
+		position: 'absolute',
+		top: '30%',
+		width: 160,
+		color: '#3668FF',
+		fontSize: 18,
+	},
 	locationIconText:{
 		position: 'absolute',
 		top: '17%',
-		width: '165%',
+		width: 160,
 		color: '#3668FF',
 		fontSize: 18,
-		textAlign: 'center'
+		marginLeft: 1,
 	},
 	logo: {
 		aspectRatio: 1,
@@ -339,14 +346,7 @@ const styles = StyleSheet.create({
 		left: '4.5%',
 		zIndex: 2,
 	},
-	websiteIconText: {
-		position: 'absolute',
-		top: '30%',
-		width: '200%',
-		textAlign: 'center',
-		color: '#3668FF',
-		fontSize: 18,
-	},
+	
 	
 	button: {
 		margin: 10,

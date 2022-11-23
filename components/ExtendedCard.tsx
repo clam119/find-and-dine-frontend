@@ -10,6 +10,7 @@ import {
   Pressable,
   View,
   Linking,
+  SafeAreaView,
 } from "react-native";
 import styles from "./styles";
 import { ImageGallery } from "./subComponents/ImageGallery";
@@ -74,7 +75,7 @@ const data  = props.selectedItem ? props.selectedItem : props.item
       }}
     >
       <View style={styles.modalContainer}>
-        <View style={styles.modalContent}>
+        <SafeAreaView style={styles.modalContent}>
           <Text style={styles.expandedCardTitle} numberOfLines={1}>
             {data.title}
           </Text>
@@ -119,7 +120,7 @@ const data  = props.selectedItem ? props.selectedItem : props.item
               <Text style={styles.websiteIconText} numberOfLines={1}><Ionicons name="ios-globe-outline" size={22} color="#3668FF" /> Website</Text>
             </Pressable>
           ) : null}
-        </View>
+        </SafeAreaView>
       </View>
     </Modal>
   );
