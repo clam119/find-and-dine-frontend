@@ -1,5 +1,5 @@
 import React, { useEffect, useState }from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, Alert } from "react-native";
 import ListTemplate from "./ListTemplate";
 import styles from "./styles";
 import { useDispatch, useSelector } from 'react-redux';
@@ -33,7 +33,10 @@ export default function NotInterested () {
 
     return (
     <>
-        <Pressable onPress={ handleResetNotInterested } style={styles.button}>
+        <Pressable onPress={() => {Alert.alert('Clear List', 'Are you sure?', [{
+  text:'Cancel',
+  onPress: () => console.log('canceled'), style: 'cancel' },
+  { text: 'OK', onPress: handleResetNotInterested}])}} style={styles.button}>
           <Text style={styles.buttonText}>Clear</Text>
         </Pressable>
         <Text style={styles.bottomNavBar}></Text>

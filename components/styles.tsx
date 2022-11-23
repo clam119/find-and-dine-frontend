@@ -43,6 +43,18 @@ const styles = StyleSheet.create({
 		right: '15%',
 		backgroundColor: onError,
 	},
+	button: {
+		margin: 10,
+		padding: 10,
+		backgroundColor: secondaryVariant,
+		justifyContent: 'center',
+		alignItems: 'center',
+		borderRadius: 4,
+	},
+	buttonText: {
+		fontSize: 18,
+		color: 'white',
+	},
 	card: {
 		width: '85%',
 		height: '85%',
@@ -320,7 +332,7 @@ const styles = StyleSheet.create({
 	},
 	refreshIcon: {
 		padding:20,
-		left: '15%',
+		left: '16%',
 		backgroundColor: onSuccess,
 	},
 	title: {
@@ -345,21 +357,6 @@ const styles = StyleSheet.create({
 		left: '4.5%',
 		zIndex: 2,
 	},
-	
-	
-	button: {
-		margin: 10,
-		padding: 10,
-		backgroundColor: 'orange',
-		justifyContent: 'center',
-		alignItems: 'center',
-		borderRadius: 4,
-	},
-	buttonText: {
-		fontSize: 18,
-		color: '#444',
-	},
-
 });
 
 export default styles;

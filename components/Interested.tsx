@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Text, Pressable } from "react-native";
+import { Text, Pressable, Alert } from "react-native";
 import styles from "./styles";
 import ListTemplate from "./ListTemplate";
 import { useDispatch, useSelector } from 'react-redux';
@@ -39,11 +39,10 @@ export default function Interested () {
 
     return (
     <>
-        <Pressable onPress={ handleResetMain } style={styles.button}>
-          <Text style={styles.buttonText}>RESET MAIN</Text>
-        </Pressable>
-
-        <Pressable onPress={ handleResetInterested } style={styles.button}>
+        <Pressable onPress={() => {Alert.alert('Clear List', 'Are you sure?', [{
+  text:'Cancel',
+  onPress: () => console.log('canceled'), style: 'cancel' },
+  { text: 'OK', onPress: handleResetInterested}])}} style={styles.button}>
           <Text style={styles.buttonText}>Clear</Text>
         </Pressable>
         
