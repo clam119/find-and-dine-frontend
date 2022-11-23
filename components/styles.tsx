@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
 	locationIconText:{
 		position: 'absolute',
 		top: '17%',
-		width: '150%',
+		width: '165%',
 		color: '#3668FF',
 		fontSize: 18,
 		textAlign: 'center'
@@ -342,7 +342,7 @@ const styles = StyleSheet.create({
 	websiteIconText: {
 		position: 'absolute',
 		top: '30%',
-		width: '150%',
+		width: '200%',
 		textAlign: 'center',
 		color: '#3668FF',
 		fontSize: 18,
