@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		alignSelf: 'center',
 		borderRadius: 8,
+		borderWidth: 4,
+		borderColor: primary,
 		zIndex:3,
 	},
 	buttonText: {
