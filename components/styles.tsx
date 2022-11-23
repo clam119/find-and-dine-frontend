@@ -44,16 +44,23 @@ const styles = StyleSheet.create({
 		backgroundColor: onError,
 	},
 	button: {
-		margin: 10,
-		padding: 10,
+		position: 'absolute',
+		top: '3%',
+		left: '80%',
+		paddingLeft: 10,
+		paddingRight: 10,
+		padding: 4,
 		backgroundColor: secondaryVariant,
 		justifyContent: 'center',
 		alignItems: 'center',
-		borderRadius: 4,
+		alignSelf: 'center',
+		borderRadius: 8,
+		zIndex:3,
 	},
 	buttonText: {
 		fontSize: 18,
 		color: 'white',
+		fontWeight: 'bold'
 	},
 	card: {
 		width: '85%',
