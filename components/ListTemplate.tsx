@@ -23,12 +23,12 @@ const Item = (props: { item: { imageUrls: string[]; title: string | number | boo
   
   return (
     <View style={styles.item}>
-      <Image
+      {props.item.imageUrls[0]?<Image
         style={styles.logo}
         source={{
           uri: props.item.imageUrls[0],
         }}
-        ></Image>
+      ></Image>:null}
       <Text style={styles.titleList}>{props.item.title}</Text>
       <Text style={styles.votes}>{"⭐".repeat(Math.round(props.item.votes))}</Text>
       <TouchableWithoutFeedback

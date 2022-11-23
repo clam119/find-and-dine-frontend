@@ -9,7 +9,7 @@ import styles from '../styles';
 export function RestaurantInfo(props: { info: any }) {
 	const info = props.info;
 
-	const categories = info.categories.filter((cat: any) => cat !== info.categoryName);
+	const categories = info.categories.filter((cat: any) => cat !== info.categoryName).slice(0,3);
 	
 	return (
 		<View style={styles.expandedInfo}>
