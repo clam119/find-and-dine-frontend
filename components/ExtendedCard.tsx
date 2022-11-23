@@ -54,16 +54,17 @@ const data  = props.selectedItem ? props.selectedItem : props.item
   const favouritedState = globalState.favourited.restaurants;
   const dispatch = useDispatch();
   const [favourited, setFavourited] = useState({})
-  
+
   const handleAddFavourited = () => {
-  if(favouritedState.includes(props.item)) {
-    return
+    if (Object.keys(favourited).length === 0) {
+      setFavourited(props.selectedItem);
+      dispatch(addToFavourite(props.selectedItem));
+      console.log('Added item');
+    } else if (Object.keys(favourited).length !== 0) {
+      console.log('Already favourited')
+      return;
+    }
   }
-  else {
-    dispatch(addToFavourite(props.item));
-    setFavourited({});
-  }
-};
 
   return (
     <Modal
