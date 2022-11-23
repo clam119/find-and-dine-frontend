@@ -15,62 +15,37 @@ export function RestaurantInfo(props: { info: any }) {
 		<View style={styles.expandedInfo}>
 			<Text
 				style={{
-					fontSize: 18,
+					fontSize: 16,
 					color: primary,
-					textAlign: 'center',
-					alignSelf: 'center',
 					fontFamily: 'Metrophobic_400Regular',
-					marginTop: 5,
+					marginTop: 2,
 					fontStyle: 'italic',
+					paddingLeft: '4%'
 				}}>
 				{info.categoryName}
 			</Text>
 			{categories.length ? (
+				
 				<Text
 					style={{
-						textAlign: 'center',
-						alignSelf: 'center',
+						padding: '1%',
 						fontSize: 15,
+						paddingLeft: '4%',
 						color: primary,
 						fontFamily: 'Metrophobic_400Regular',
-						padding: '3%'
-					}}>{categories.join(' ')}</Text>
+					}}>{categories.join('\n')}</Text>
 			) : (
 				<></>
 			)}
 			<Text
 				style={{
-					textAlign: 'center',
-					alignSelf: 'center',
 					fontSize: 15,
+					paddingLeft: '4%',
 					color: primary,
 					fontFamily: 'Metrophobic_400Regular',
 					fontStyle: 'italic'
 				}}>
-				{info.address.slice(0, info.address.indexOf(','))}
-			</Text>
-			<Text
-				style={{
-					textAlign: 'center',
-					alignSelf: 'center',
-					fontSize: 15,
-					color: primary,
-					fontFamily: 'Metrophobic_400Regular',
-					fontStyle: 'italic'
-				}}>
-				{info.city}
-			</Text>
-			<Text
-				style={{
-					textAlign: 'center',
-					alignSelf: 'center',
-					fontSize: 15,
-					color: primary,
-					marginBottom: '5%',
-					fontFamily: 'Metrophobic_400Regular',
-					fontStyle: 'italic'
-				}}>
-				{info.postalCode}
+				{info.address.endsWith('United Kingdom') ? info.address.slice(0, -16): info.address}
 			</Text>
 		</View>
 	);
