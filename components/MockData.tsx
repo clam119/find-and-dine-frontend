@@ -522,7 +522,7 @@ export const MockData = [
       "https://lh5.googleusercontent.com/p/AF1QipMYvhr1oYJckhCzNhnapOzJrPVd0o1vblFzHlSG=w1920-h1080-k-no"
     ],
     reviewsCount: 775,
-    address: "244 Deansgate (entrance on, Longworth St, Manchester M3 4BQ, United Kingdom",
+    address: "244 Deansgate, Manchester M3 4BQ, United Kingdom",
     categories: [
       "Mediterranean restaurant",
       "Restaurant",
