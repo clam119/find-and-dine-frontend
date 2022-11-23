@@ -141,60 +141,6 @@ export const MockData = [
     website: "http://www.teppanyakichinatown.com/"
   },
   {
-    id: "6373ac8197af2d3d260b2145",
-    title: "Restaurant nation",
-    imageUrls: [],
-    reviewsCount: 0,
-    address: "116 Portland St, Manchester M1 4RL, United Kingdom",
-    categories: [
-      "Restaurant"
-    ],
-    categoryName: "Restaurant",
-    city: "Manchester",
-    location: {
-      lat: 53.4764866,
-      lng: -2.2422779
-    },
-    placeId: "ChIJH-2yuACxe0gR7sEVOzGxXmM",
-    postalCode: "M1 4RL",
-    reviewsDistribution: {
-      oneStar: 0,
-      twoStar: 0,
-      threeStar: 0,
-      fourStar: 0,
-      fiveStar: 0
-    },
-    url: "https://www.google.com/maps/place/Restaurant+nation/@53.4764866,-2.2422779,17z/data=!3m1!4b1!4m5!3m4!1s0x487bb100b8b2ed1f:0x635eb1313b15c1ee!8m2!3d53.4764866!4d-2.2422779?hl=en",
-    website: null
-  },
-  {
-    id: "6373ac8197af2d3d260b2146",
-    title: "Carry Eating Restaurant",
-    imageUrls: [],
-    reviewsCount: 0,
-    address: "45 King St, Manchester M2 4WQ, United Kingdom",
-    categories: [
-      "Restaurant"
-    ],
-    categoryName: "Restaurant",
-    city: "Manchester",
-    location: {
-      lat: 53.4812511,
-      lng: -2.245198
-    },
-    placeId: "ChIJjS5iOYyxe0gRBAe2ewCAL5M",
-    postalCode: "M2 4WQ",
-    reviewsDistribution: {
-      oneStar: 0,
-      twoStar: 0,
-      threeStar: 0,
-      fourStar: 0,
-      fiveStar: 0
-    },
-    url: "https://www.google.com/maps/place/Carry+Eating+Restaurant/@53.4812511,-2.245198,17z/data=!3m1!4b1!4m5!3m4!1s0x487bb18c39622e8d:0x932f80007bb60704!8m2!3d53.4812511!4d-2.245198?hl=en",
-    website: "http://carry-eating-restaurant.business.site/"
-  },
-  {
     id: "6373ac8197af2d3d260b2148",
     title: "Yuzu Japanese Tapas",
     imageUrls: [
@@ -258,33 +204,6 @@ export const MockData = [
     },
     url: "https://www.google.com/maps/place/Pinwei+Chinese+Restaurant/@53.4779968,-2.2412947,17z/data=!3m1!4b1!4m5!3m4!1s0x487bb1a56c53c9fd:0xd23f6d40b2bec30c!8m2!3d53.4779968!4d-2.2412947?hl=en",
     website: "http://pinwei.co.uk/"
-  },
-  {
-    id: "6373ac8197af2d3d260b214b",
-    title: "Minori Restaurant Limited",
-    imageUrls: [],
-    reviewsCount: 0,
-    address: "1 Booth St, Greater, Manchester M2 4DU, United Kingdom",
-    categories: [
-      "Restaurant"
-    ],
-    categoryName: "Restaurant",
-    city: "Manchester",
-    location: {
-      lat: 53.4804809,
-      lng: -2.2433946
-    },
-    placeId: "ChIJVVUldcGxe0gR0134iIf6vCY",
-    postalCode: "M2 4DU",
-    reviewsDistribution: {
-      oneStar: 0,
-      twoStar: 0,
-      threeStar: 0,
-      fourStar: 0,
-      fiveStar: 0
-    },
-    url: "https://www.google.com/maps/place/Minori+Restaurant+Limited/@53.4804809,-2.2433946,17z/data=!3m1!4b1!4m5!3m4!1s0x487bb1c175255555:0x26bcfa8788f85dd3!8m2!3d53.4804809!4d-2.2433946?hl=en",
-    website: null
   },
   {
     id: "6373ac8197af2d3d260b214c",

@@ -29,10 +29,11 @@ export default function BottomNavBar() {
         tabBarActiveTintColor: primary,
         tabBarInactiveTintColor: secondary,
         tabBarActiveBackgroundColor: onSurface,
-        tabBarInactiveBackgroundColor: surface
+        tabBarInactiveBackgroundColor: surface,
+        
       })}
     >
-      <BottomNavButton.Screen name="Home" component={HomePage} />
+      <BottomNavButton.Screen name="Home" component={HomePage}/>
       <BottomNavButton.Screen name="Not Interested" component={NotInterested} />
       <BottomNavButton.Screen name="Interested" component={Interested} />
       <BottomNavButton.Screen name="Favourites" component={Favourites} />
