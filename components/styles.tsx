@@ -44,8 +44,9 @@ const styles = StyleSheet.create({
 		backgroundColor: onError,
 	},
 	button: {
-		bottom: '6%',
-		left: '38%',
+		position: 'absolute',
+		top: '3%',
+		left: '80%',
 		paddingLeft: 10,
 		paddingRight: 10,
 		padding: 4,
@@ -54,12 +55,11 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		alignSelf: 'center',
 		borderRadius: 8,
-		zIndex:2,
+		zIndex:3,
 	},
 	buttonText: {
 		fontSize: 18,
 		color: 'white',
-		alignSelf: 'center',
 		fontWeight: 'bold'
 	},
 	card: {
