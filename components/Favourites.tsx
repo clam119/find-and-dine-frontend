@@ -1,5 +1,5 @@
 import React, { useState, useEffect }from "react";
-import { Pressable, Text } from "react-native";
+import { Pressable, Text, Alert } from "react-native";
 import styles from "./styles";
 import ListTemplate from "./ListTemplate";
 import { addToMain, resetFavourite } from "./redux/action";
@@ -26,7 +26,10 @@ export default function Favourites() {
 
   return (
     <>
-        <Pressable onPress={ handleResetFavourited } style={styles.button}>
+        <Pressable onPress={() => {Alert.alert('Clear List', 'Are you sure?', [{
+  text:'Cancel',
+  onPress: () => console.log('canceled'), style: 'cancel' },
+  { text: 'OK', onPress: handleResetFavourited}])}} style={styles.button}>
           <Text style={styles.buttonText}>Clear</Text>
         </Pressable>
       <Text style={styles.bottomNavBar}></Text>
