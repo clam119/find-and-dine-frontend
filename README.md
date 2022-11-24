@@ -1,6 +1,8 @@
 # Find and Dine - Front End
 This is the front-end repository for Team G3O's final project at the [Northcoders Bootcamp](https://northcoders.com) and below will be more information regarding the project itself, an introduction to the members of Team G3O, technologies explored, and attributions to relevant parties of which we have used their content.
 
+Before that, here's a link to the Back-End directory: [Find and Dine Back-End](https://github.com/clam119/find-and-dine-backend)
+
 ## Team G3O
 Team G3O comprises of only the most personable and witty bantering members at Northcoders:
 * [Antony Lester](https://www.linkedin.com/in/antony-lester/) - AKA the Main Pusher
